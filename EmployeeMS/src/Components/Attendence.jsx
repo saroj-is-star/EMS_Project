@@ -36,7 +36,7 @@ const Attendence = () => {
                             </div>
                             <div>
                                 <button type="button" className="btn btn-outline-primary btn-sm rounded-0 me-2">Mark All Absent As Present</button>
-                                <button type="button" class="btn btn-primary btn-sm rounded-0"> <i class="bi bi-download me-2"></i>Daily Repoart</button>
+                                <button type="button" className="btn btn-primary btn-sm rounded-0"> <i className="bi bi-download me-2"></i>Daily Repoart</button>
                             </div>
                         </div>
                     </div>
@@ -77,11 +77,11 @@ const Attendence = () => {
                 <div className='row mt-3'>
                     <div className='col mb-3'>
                         <div className='d-flex justify-content-between'>
-                            <div className='rounded-0 d-flex bg-white'>
-                                <i className="bi bi-search text-center pt-2 ps-2"></i>
-                                <input type="text" className='border-0 ps-2 input-t' placeholder='Search Name of employee' />
-                                <button type="button" class="btn btn-primary btn-sm rounded-0">Search</button>
-                            </div>
+                        <div className='rounded-0 d-flex salary-search-input'>
+                                    <i className="bi bi-search text-center pt-2 ps-2"></i>
+                                    <input type="text" className='border-0 ps-2 input-t w-100' placeholder='Search Name of employee' />
+                                    <button type="button" className="btn btn-primary btn-sm rounded-0">Search</button>
+                                </div>
                             <div>
                                 <button type="button" className="btn btn-outline-primary  rounded-0 me-0">Import Attendence</button>
                             </div>

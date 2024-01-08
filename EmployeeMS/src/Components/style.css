@@ -17,7 +17,7 @@
 }
 
 .navbg{
-    background-color: rgb(155, 161, 159);
+    background-color: rgb(155, 161, 159);    
 }
 
 ul li :hover {
@@ -44,6 +44,17 @@ ul li :hover {
 
 #attendence-bg {
     background-color: rgb(245, 238, 238);
+    overflow: hidden;
+}
+
+#notification-bg{
+    background-color: white;
+    width: 95%;
+    height: 60%;
+    margin-left: 3%;
+    border: .1px solid rgb(228, 225, 225);  
+    border-radius: 5px;
+    
 }
 
 .bgcolor {
@@ -52,6 +63,11 @@ ul li :hover {
 
 .input-t{
     outline: none;
+    background-color: rgb(235, 244, 250);
+}
+
+.emp-menu{
+    padding-top: 7%;
 }
 
 /* className={({isActive}) => `nav-link text-white px-0 align-middle ${isActive ? "bg-danger" : "bg-warning"}`} */
@@ -69,5 +85,61 @@ ul li :hover {
     display: block;
 }
 .color-y{
-    background-color: rgb(207, 197, 205);
+    background-color: rgb(175, 161, 172);
+    border-radius: 2px;
+    border-bottom: 2px solid rgb(8, 8, 26);
+    height: 42px;
+    /* padding: 0 10px; */
+}
+
+.select-w{
+    width: 22%;
+    height: 35px;
+    margin-left: 3px;
+}
+.notification-detail{
+    margin-top: 12%;
+    background-position: center;
+}
+
+#salary-bg{
+    background-color: white;
+    width: 97%;
+    height: auto;
+    margin-left: 3%;
+    border: .1px solid rgb(228, 225, 225);  
+    border-radius: 5px;
+}
+.salary-container-color{
+    background-color: rgb(224, 238, 233);
+}
+.salary-search-input{
+    background-color: rgb(235, 244, 250);
+    border: 1px rgb(2, 48, 66) solid;  
+}
+.border-i{
+    border: 1px rgb(169, 178, 182) solid;
+    border-radius: 8px;
+    width: 25px;
+    height: 25px;
+    margin: 1px;
+    text-align: center;
+    cursor: pointer;
+}
+.border-s{
+    border: 1px rgb(169, 178, 182) solid;
+    border-radius: 8px;
+    width: auto;
+    height: 25px;
+    margin-top: 1px;
+    outline: none;
+}
+
+.salary-search{
+    background-color: rgb(223, 226, 220);
+    border: 1px rgb(2, 48, 66) solid;
+    justify-content: center;
+}
+.salary-search:hover{
+    background-color: rgb(161, 163, 159);
 }

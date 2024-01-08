@@ -27,6 +27,7 @@ const Dashboard = () => {
           </div>
           </Link>
           <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+          
             <Link
               to="/dashboard"
               className=" align-items-center pb-3 mb-md-1 mt-md-3 me-md-auto text-white text-decoration-none"
@@ -87,7 +88,7 @@ const Dashboard = () => {
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-fingerprint ms-1"></i>
-                  <span className="ms-2 d-none d-sm-inline">Attendence</span>
+                  <span className="ms-2 d-none d-sm-inline">Attendance</span>
                 </NavLink>
               </li>
               <li className="w-100">
@@ -101,7 +102,7 @@ const Dashboard = () => {
               </li>
               <li className="w-100">
                 <NavLink
-                  to="/dashboard/profile"
+                  to="/dashboard/notification"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-bell ms-1"></i>
@@ -110,7 +111,7 @@ const Dashboard = () => {
               </li>
               <li className="w-100">
                 <NavLink
-                  to="/dashboard/profile"
+                  to="/dashboard/calculate-salary"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-currency-rupee ms-1"></i>
@@ -184,9 +185,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="col p-0 m-0">
-          {/* <div className="p-2 d-flex justify-content-center shadow">
-                <h4>Emoployee Management System</h4>
-            </div> */}
+          
           <Outlet />
         </div>
       </div>

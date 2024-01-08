@@ -14,31 +14,31 @@ const Report = () => {
         <div className='container h-100' id='attendence-bg'>
             <div className='row'>
                 <div className='col'>
-                    <h3 className='ms-5 pt-3'><strong>Company Repoart</strong></h3>
+                    <h3 className='ms-5 pt-3'><strong>Company Reports</strong></h3>
                 </div>
             </div>
             <div className='ms-5 me-3 mb-4'>
                 <div className="container w-full bg-white rounded-0 row">
-                    <div className='col'>
-                        <ul className="nav nav-underline d-flex justify-content-start flex-nowrap border-bottom mt-1">
+                    <div className='col border-bottom'>
+                        <ul className="nav nav-underline d-flex justify-content-start flex-nowrap  mt-1">
                             <li className="nav-item" onClick={() => updateToggle(1)}>
                                 <div className={toggle === 1 ? "color-y" : "color-n"}>
-                                    <p className="nav-link text-dark fw-semibold" role='button'>Attendance</p>
+                                    <p className="nav-link text-dark fw-semibold " role='button'>Attendance</p>
                                 </div>
                             </li>
                             <li className="nav-item" onClick={() => updateToggle(2)}>
                                 <div className={toggle === 2 ? "color-y" : "color-n"}>
-                                <p className="nav-link text-dark fw-semibold" role='button'>Payment</p>
+                                <p className="nav-link text-dark fw-semibold " role='button'>Payment</p>
                                 </div>
                             </li>
                             <li className="nav-item" onClick={() => updateToggle(3)}>
                                 <div className={toggle === 3 ? "color-y" : "color-n"}>
-                                <p className="nav-link text-dark fw-semibold" role='button'>Notes</p>
+                                <p className="nav-link text-dark fw-semibold " role='button'>Notes</p>
                                 </div>
                             </li>
                             <li className="nav-item" onClick={() => updateToggle(4)}>
                                 <div className={toggle === 4 ? "color-y" : "color-n"}>
-                                <p className="nav-link text-dark fw-semibold" role='button'>Employee List</p>
+                                <p className="nav-link text-dark fw-semibold " role='button'>Employee List</p>
                                 </div>
                             </li>
                         </ul>
@@ -51,8 +51,8 @@ const Report = () => {
                             <span className='me-2'>
                                 <label className='me-2 '>Report Type</label><br />
                                 <select className="bg-white rounded-1 border-1" >
-                                    <option selected>Attendence Summery Report</option>
-                                    <option value="1">Deatailed Attendence Report</option>
+                                    <option selected>Attendance Summary Report</option>
+                                    <option value="1">Deatailed Attendance Report</option>
                                     <option value="2">Late Arrival Report</option>
                                     <option value="3">Leave Report</option>
                                     <option value="3">Over Time Report</option>
@@ -114,11 +114,11 @@ const Report = () => {
                             <span className='me-2'>
                                 <label className='me-2 '>Report Type</label><br />
                                 <select className="bg-white rounded-1 border-1" >
-                                    <option selected>Salary Summery Report</option>
+                                    <option selected>Salary Summary Report</option>
                                     <option value="1">Salary Deatailed Report</option>
                                     <option value="2">PF Chalan Report</option>
                                     <option value="3">Loan Report</option>
-                                    <option value="3">TDS Summery Report</option>
+                                    <option value="3">TDS Summary Report</option>
                                     <option value="3">Consolidated Report</option>
                                 </select>
                             </span>
@@ -238,8 +238,8 @@ const Report = () => {
                             <span className='me-2'>
                                 <label className='me-2 '>Report Type</label><br />
                                 <select className="bg-white rounded-1 border-1" >
-                                    <option selected>Attendence Summery Report</option>
-                                    <option value="1">Deatailed Attendence Report</option>
+                                    <option selected>Attendance Summary Report</option>
+                                    <option value="1">Deatailed Attendance Report</option>
                                     <option value="2">Late Arrival Report</option>
                                     <option value="3">Leave Report</option>
                                     <option value="3">Over Time Report</option>

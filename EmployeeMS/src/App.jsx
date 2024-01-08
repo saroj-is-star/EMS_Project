@@ -18,6 +18,8 @@ import AdminRegistration from './Components/AdminRegistration'
 import EmployeeMenu from './Components/EmployeeMenu'
 import Attendence from './Components/Attendence'
 import Report from './Components/Report'
+import Notification from './Components/Notification'
+import CalculateSalary from './Components/CalculateSalary'
 
 
 
@@ -40,7 +42,6 @@ function App() {
         }>
           <Route path='' element={<Home />}></Route>
           <Route path='/dashboard/employeemenu' element={<EmployeeMenu />}>
-            {/* <Route path='/dashboard/employeemenu/employee' element={<Employee/>}></Route> */}
           </Route>
           <Route path='/dashboard/employee' element={<Employee />}></Route>
           <Route path='/dashboard/category' element={<Category />}></Route>
@@ -48,6 +49,8 @@ function App() {
           <Route path='/dashboard/profile' element={<Profile />}></Route>
           <Route path='/dashboard/attendence' element={<Attendence />}></Route>
           <Route path='/dashboard/report' element={<Report />}></Route>
+          <Route path='/dashboard/notification' element={<Notification />}></Route>
+          <Route path='/dashboard/calculate-salary' element={<CalculateSalary />}></Route>
           <Route path='/dashboard/add_employee' element={<AddEmployee />}></Route>
           <Route path='/dashboard/edit_employee/:id' element={<EditEmployee />}
           ></Route>
