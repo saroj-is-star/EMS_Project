@@ -20,6 +20,8 @@ import Attendence from './Components/Attendence'
 import Report from './Components/Report'
 import Notification from './Components/Notification'
 import CalculateSalary from './Components/CalculateSalary'
+import AddPayment from './Components/AddPayment'
+import PayEmployees from './Components/PayEmployees'
 
 
 
@@ -51,6 +53,8 @@ function App() {
           <Route path='/dashboard/report' element={<Report />}></Route>
           <Route path='/dashboard/notification' element={<Notification />}></Route>
           <Route path='/dashboard/calculate-salary' element={<CalculateSalary />}></Route>
+          <Route path='/dashboard/add-payment' element={<AddPayment />}></Route>
+          <Route path='/dashboard/pay-employees' element={<PayEmployees />}></Route>
           <Route path='/dashboard/add_employee' element={<AddEmployee />}></Route>
           <Route path='/dashboard/edit_employee/:id' element={<EditEmployee />}
           ></Route>

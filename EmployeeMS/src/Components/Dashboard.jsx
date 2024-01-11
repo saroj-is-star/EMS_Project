@@ -120,7 +120,7 @@ const Dashboard = () => {
               </li>
               <li className="w-100">
                 <NavLink
-                  to="/dashboard/profile"
+                  to="/dashboard/add-payment"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-credit-card ms-1"></i>
@@ -129,16 +129,16 @@ const Dashboard = () => {
               </li>
               <li className="w-100">
                 <NavLink
-                  to="/dashboard/profile"
+                  to="/dashboard/pay-employees"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-cash ms-1"></i>
-                  <span className="ms-2 d-none d-sm-inline">Add Payment</span>
+                  <span className="ms-2 d-none d-sm-inline">Pay Employees</span>
                 </NavLink>
               </li>
               <li className="w-100">
                 <NavLink
-                  to="/dashboard/profile"
+                  to="/dashboard/live-location"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-crosshair ms-1"></i>
@@ -147,7 +147,7 @@ const Dashboard = () => {
               </li>
               <li className="w-100">
                 <NavLink
-                  to="/dashboard/profile"
+                  to="/dashboard/document"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-journal ms-1"></i>
@@ -156,7 +156,7 @@ const Dashboard = () => {
               </li>
               <li className="w-100">
                 <NavLink
-                  to="/dashboard/profile"
+                  to="/dashboard/settings"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-gear ms-1"></i>
@@ -165,7 +165,7 @@ const Dashboard = () => {
               </li>
               <li className="w-100">
                 <NavLink
-                  to="/dashboard/profile"
+                  to="/dashboard/contact-us"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-question-circle ms-1"></i>

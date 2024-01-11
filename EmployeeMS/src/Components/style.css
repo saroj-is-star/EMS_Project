@@ -63,7 +63,7 @@ ul li :hover {
 
 .input-t{
     outline: none;
-    background-color: rgb(235, 244, 250);
+    background-color: rgb(241, 250, 235);
 }
 
 .emp-menu{
@@ -142,4 +142,27 @@ ul li :hover {
 }
 .salary-search:hover{
     background-color: rgb(161, 163, 159);
+}
+.multi-select{
+    width: 20%;
+}
+
+#dat{
+    cursor: pointer;
+    height: 4.7vh;
+    background-color: white;
+}
+.lab{
+    border: 1px rgb(119, 117, 124) solid;
+    border-radius: 5px;
+    width: 15vw;
+    height: 5vh;
+}
+/* .lab :hover{
+    color: rgb(207, 12, 12);
+} */
+.size-a{
+    height: 5vh;
+    width: 15vw;
+    border: 1px rgb(119, 117, 124) solid;
 }
