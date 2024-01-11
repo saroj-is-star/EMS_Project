@@ -5,12 +5,12 @@ import { Link, NavLink } from 'react-router-dom'
 const EmployeeMenu = () => {
 
   return (
-    <div className='p-0 m-0'>
+    <div className='row ms-1 me-1 emp_menu_bg'>
       <div className="p-2 d-flex justify-content-center shadow">
         <h4>Manage Emoployee</h4>
       </div>
-      <div className="w-full container-fluid">
-        <ul className="nav nav-underline d-flex justify-content-between flex-nowrap border-bottom">
+      <div className="col">
+        <ul className="nav nav-underline justify-content-between border-bottom">
           <li className="nav-item">
             <Link to="/dashboard/employee"
               className="nav-link text-dark active" aria-current="page">Employee Details</Link>
@@ -33,7 +33,7 @@ const EmployeeMenu = () => {
         </ul>
       </div>
       <div className='emp-menu'>
-      <div className='d-flex  justify-content-center container h-100'>
+      <div className='d-flex  justify-content-center h-100'>
         <div >
             <img src='Images/emp-bg.png' alt="IMG" />
           </div>

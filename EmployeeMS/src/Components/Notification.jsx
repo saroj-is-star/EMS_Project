@@ -6,7 +6,7 @@ const Notification = () => {
   return (
     <>
       <div className='container h-100' id='attendence-bg'>
-        <div className='mt-3' id='notification-bg'>
+        <div className='row mt-3' id='notification-bg'>
           <div className='mt-2 ms-4'>
             <h3 className='fw-semibold'>Notifications</h3>
           </div>

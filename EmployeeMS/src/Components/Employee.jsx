@@ -29,10 +29,11 @@ const Employee = () => {
       })
   }
   return (
-    <div className='col p-0 m-0'>
+    <>
+    <div className='row w-full'>
       
-      <div className="px-5 mt-3">
-        <div className="d-flex justify-content-lg-start">
+      <div className="row px-5 mt-3">
+        <div className="col d-flex justify-content-lg-start">
         <div>
         <Link to="/dashboard/add_employee" className="btn btn-success mx-2">
           Add Employee
@@ -44,7 +45,7 @@ const Employee = () => {
         </Link>
         </div>
         </div>
-        <div className="mt-3">
+        <div className="row mt-3">
           <table className="table">
             <thead>
               <tr>
@@ -90,6 +91,7 @@ const Employee = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

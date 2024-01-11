@@ -16,8 +16,20 @@
     color: white;
 }
 
+.main_div{
+    position: fixed;
+}
+
 .navbg{
-    background-color: rgb(155, 161, 159);    
+    background-color: rgb(155, 161, 159);
+    overflow-y: scroll;
+    width: fit-content;
+    height: 100vh;
+    
+}
+
+#main_contaner{
+    height: 100vh;
 }
 
 ul li :hover {
@@ -42,15 +54,9 @@ ul li :hover {
     border-radius: 50%;
 }
 
-#attendence-bg {
-    background-color: rgb(245, 238, 238);
-    overflow: hidden;
-}
-
 #notification-bg{
     background-color: white;
     width: 95%;
-    height: 60%;
     margin-left: 3%;
     border: .1px solid rgb(228, 225, 225);  
     border-radius: 5px;
@@ -58,16 +64,13 @@ ul li :hover {
 }
 
 .bgcolor {
-    background-color: white
+    background-color: white;
+    flex-wrap: nowrap;
 }
 
 .input-t{
     outline: none;
     background-color: rgb(241, 250, 235);
-}
-
-.emp-menu{
-    padding-top: 7%;
 }
 
 /* className={({isActive}) => `nav-link text-white px-0 align-middle ${isActive ? "bg-danger" : "bg-warning"}`} */
@@ -89,7 +92,6 @@ ul li :hover {
     border-radius: 2px;
     border-bottom: 2px solid rgb(8, 8, 26);
     height: 42px;
-    /* padding: 0 10px; */
 }
 
 .select-w{
@@ -104,14 +106,14 @@ ul li :hover {
 
 #salary-bg{
     background-color: white;
-    width: 97%;
+    width: 100%;
     height: auto;
-    margin-left: 3%;
     border: .1px solid rgb(228, 225, 225);  
     border-radius: 5px;
 }
 .salary-container-color{
     background-color: rgb(224, 238, 233);
+    width: 100%;
 }
 .salary-search-input{
     background-color: rgb(235, 244, 250);
@@ -158,11 +160,49 @@ ul li :hover {
     width: 15vw;
     height: 5vh;
 }
-/* .lab :hover{
-    color: rgb(207, 12, 12);
-} */
+
 .size-a{
     height: 5vh;
     width: 15vw;
     border: 1px rgb(119, 117, 124) solid;
+}
+.category-bg{
+    width: 82vw;
+    margin-left: 1px;
+}
+
+.add_emp_bg{
+    height: 100vh;
+    overflow-y: scroll;
+}
+.home_bg{
+    width: 82vw;
+}
+.emp_menu_bg{
+    width: 82vw;
+}
+.emp-menu{
+    height: 30vh;
+}
+#attendence-bg {
+    background-color: rgb(245, 238, 238);
+    overflow: scroll;
+    width: 82vw;
+    height: 100vh;
+}
+.calculate_salary_bg {
+    background-color: rgb(245, 238, 238);
+    overflow-y: scroll;
+    width: 82vw;
+    height: 100vh;
+}
+.report_bg {
+    background-color: rgb(245, 238, 238);
+    width: 82vw;
+    height: 100vh;
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+}
+.report_menu_bg{
+    background-color: white;
 }

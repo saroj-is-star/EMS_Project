@@ -51,8 +51,8 @@ const AddEmployee = () => {
   }
 
   return (
-    <div className="d-flex justify-content-center align-items-center mt-3">
-      <div className="p-3 rounded w-50 border">
+    <div className="d-flex justify-content-center align-items-center add_emp_bg">
+      <div className="p-3 rounded w-50 border mt-5 mb-1">
         <h3 className="text-center">Add Employee</h3>
         <form className="row g-1" onSubmit={handleSubmit}>
           <div className="col-12">

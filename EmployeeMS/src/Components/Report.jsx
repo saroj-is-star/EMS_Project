@@ -11,14 +11,14 @@ const Report = () => {
     }
 
     return (
-        <div className='container h-100' id='attendence-bg'>
+        <div className='report_bg'>
             <div className='row'>
                 <div className='col'>
                     <h3 className='ms-5 pt-3'><strong>Company Reports</strong></h3>
                 </div>
             </div>
             <div className='ms-5 me-3 mb-4'>
-                <div className="container w-full bg-white rounded-0 row">
+                <div className="container report_menu_bg rounded-0 row">
                     <div className='col border-bottom'>
                         <ul className="nav nav-underline d-flex justify-content-start flex-nowrap  mt-1">
                             <li className="nav-item" onClick={() => updateToggle(1)}>
@@ -46,7 +46,7 @@ const Report = () => {
                 </div>
                 {/* Attendance container start */}
                 <div className={toggle === 1 ? "show-tab-container" : "tab-container"}>
-                    <div className='container w-full bg-white rounded-0 row pt-3'>
+                    <div className='container report_menu_bg rounded-0 row pt-3'>
                         <div className='col'>
                             <span className='me-2'>
                                 <label className='me-2 '>Report Type</label><br />
@@ -109,7 +109,7 @@ const Report = () => {
 
                 {/* Payment container start */}
                 <div className={toggle === 2 ? "show-tab-container" : "tab-container"}>
-                    <div className=' container w-full bg-white rounded-0 row pt-3'>
+                    <div className=' container w-full report_menu_bg rounded-0 row pt-3'>
                         <div className='col'>
                             <span className='me-2'>
                                 <label className='me-2 '>Report Type</label><br />
@@ -173,7 +173,7 @@ const Report = () => {
 
                 {/* Notes container start */}
                 <div className={toggle === 3 ? "show-tab-container" : "tab-container"}>
-                    <div className=' container w-full bg-white rounded-0 row pt-3'>
+                    <div className=' container w-full report_menu_bg rounded-0 row pt-3'>
                         <div className='col'>
                             <span className='me-2'>
                                 <label className='me-2 '>Report Type</label><br />
@@ -233,7 +233,7 @@ const Report = () => {
 
                 {/* EmployeeList container start */}
                 <div className={toggle === 4 ? "show-tab-container" : "tab-container"}>
-                    <div className=' container w-full bg-white rounded-0 row pt-3'>
+                    <div className=' container w-full report_menu_bg rounded-0 row pt-3'>
                         <div className='col'>
                             <span className='me-2'>
                                 <label className='me-2 '>Report Type</label><br />
@@ -291,7 +291,7 @@ const Report = () => {
 
             </div>
             <div className='ms-5 me-3'>
-                <div className="container w-full bg-white rounded-0 row border-bottom">
+                <div className="container w-full report_menu_bg rounded-0 row border-bottom">
                     <div className='col d-flex justify-content-between align-content-center mt-2'>
                         <div >
                             <p className='pt-1'>Recent Reports</p>
@@ -301,7 +301,7 @@ const Report = () => {
                         </div>
                     </div>
                 </div>
-                <div className='container w-full bg-white rounded-0 row'>
+                <div className='container w-full report_menu_bg rounded-0 row'>
                     <div className='col mt-3 align-content-center'>
                         <table className="table table-bordered">
                             <thead >

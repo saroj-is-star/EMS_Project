@@ -52,11 +52,12 @@ const Home = () => {
     })
   }
   return (
-    <div>
+    <>
+    <div className='row ms-2 home_bg'>
       <div className="p-2 d-flex justify-content-center shadow">
                 <h4>Dashboard</h4>
             </div>
-      <div className='p-3 d-flex justify-content-around mt-3'>
+      <div className='col p-3 d-flex justify-content-around mt-3'>
         <div className='px-3 pt-2 pb-3 border shadow-sm w-25'>
           <div className='text-center pb-1'>
             <h4>Admin</h4>
@@ -88,7 +89,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='mt-4 px-5 pt-3'>
+      <div className='row mt-4 px-5 pt-3'>
         <h3>List of Admins</h3>
         <table className='table'>
           <thead>
@@ -119,6 +120,7 @@ const Home = () => {
         </table>
       </div>
     </div>
+    </>
   )
 }
 

@@ -19,11 +19,12 @@ const AddCategory = () => {
         .catch(err => console.log(err))
     }
   return (
-    <div className='d-flex justify-content-center align-items-center h-75'>
-        <div className='p-3 rounded w-25 border'>
+    <>
+    <div className=' ms-2 d-flex justify-content-center align-items-center category-bg mt-5'>
+        <div className=' p-3 rounded border'>
             <h2>Add Category</h2>
             <form onSubmit={handleSubmit}>
-                <div className='mb-3'>
+                <div className='row mb-3'>
                     <label htmlFor="category"><strong>Category:</strong></label>
                     <input type="text" name='category' placeholder='Enter Category'
                      onChange={(e) => setCategory(e.target.value)} className='form-control rounded-0'/>
@@ -32,6 +33,7 @@ const AddCategory = () => {
             </form>
         </div>
     </div>
+    </>
   )
 }
 

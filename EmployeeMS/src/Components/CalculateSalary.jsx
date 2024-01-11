@@ -13,7 +13,7 @@ const CalculateSalary = () => {
 
     return (
         <>
-            <div className='container h-100' id='attendence-bg'>
+            <div className='calculate_salary_bg'>
                 <div className='mt-3' id='salary-bg'>
                     <div className='ms-3 mb-4'>
                         <div className="container w-full rounded-0 row">

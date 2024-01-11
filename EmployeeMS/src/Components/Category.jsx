@@ -17,16 +17,15 @@ const Category = () => {
         }).catch(err => console.log(err))
     }, [])
   return (
-    <div className='col p-0 m-0'>
-        {/* <div className='d-flex justify-content-center'>
-            <h3>Cetegory List</h3>
-        </div> */}
-        <div className="p-2 d-flex justify-content-center shadow">
+    <>
+    <div className='row category-bg'>
+        
+        <div className=" p-2 d-flex justify-content-center shadow">
                 <h4>Cetegory List</h4>
             </div>
             <div className=' px-5 mt-3 '>
         <Link to="/dashboard/add_category" className='btn btn-success'>Add Cetegory</Link>
-        <div className='mt-3'>
+        <div className='row mt-3'>
             <table className='table'>
                 <thead>
                     <tr>
@@ -46,6 +45,7 @@ const Category = () => {
         </div>
         </div>
     </div>
+    </>
   )
 }
 

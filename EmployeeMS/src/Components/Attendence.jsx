@@ -6,7 +6,7 @@ const Attendence = () => {
 
     return (
         <>
-            <div className="container h-100 text-center" id='attendence-bg'>
+            <div className=" container text-center" id='attendence-bg'>
                 <div className="row">
                     <div className="col mt-3">
                         <div className='d-flex justify-content-between'>
