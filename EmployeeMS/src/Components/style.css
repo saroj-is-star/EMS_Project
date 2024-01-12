@@ -206,3 +206,45 @@ ul li :hover {
 .report_menu_bg{
     background-color: white;
 }
+
+::-webkit-scrollbar{
+    width: .5rem;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(99, 90, 90);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(217, 228, 228);
+    border-radius: 3rem;
+    border: .1rem solid transparent;
+    background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(195, 219, 151);
+}
+
+#blink-bg{
+    margin-left: 8px;
+    color: white; 
+    background: rgb(218, 25, 25); 
+    font-size: 10px; 
+    padding: 0px 4px; 
+    border-radius: 10px; 
+    width: 10px; 
+    text-align: center; 
+    height: 16px;
+    animation: blinkPulse 1s infinite;
+}
+@keyframes blinkPulse{
+    0%{
+        opacity: 1;
+        }
+    100%{
+        opacity: 2;
+        text-shadow: 1px 0px 3px 3px rgb(218, 25, 25);
+        }
+    0%{
+        opacity: 1;
+        box-shadow: 1px 0px 3px 3px rgb(218, 25, 25);
+        }
+}
