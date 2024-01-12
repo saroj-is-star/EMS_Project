@@ -61,7 +61,9 @@ const Dashboard = () => {
                   <i className="fs-4 bi-people ms-1"></i>
                   <span className="ms-2 d-none d-sm-inline">
                     Manage Employees
+                    <span id="blink-bg">New</span>
                   </span>
+                  
                 </NavLink>
               </li>
               <li className="w-100">
@@ -133,7 +135,10 @@ const Dashboard = () => {
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-cash ms-1"></i>
-                  <span className="ms-2 d-none d-sm-inline">Pay Employees</span>
+                  <span className="ms-2 d-none d-sm-inline">
+                    Pay Employees
+                    <span id="blink-bg">New</span>
+                    </span>
                 </NavLink>
               </li>
               <li className="w-100">
