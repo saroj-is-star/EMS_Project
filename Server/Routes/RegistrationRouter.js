@@ -18,8 +18,8 @@ router.post('/admin_registration', (req, res) => {
         ]
         con.query(sql, [values], (err, result) => {
             if(err) return res.json({Status: false, Error: err})
+            console.log(result);
             return res.json({Status: true})
-        console.log(result);
         })
     
 })

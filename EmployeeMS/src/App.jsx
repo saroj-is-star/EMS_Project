@@ -22,6 +22,7 @@ import Notification from './Components/Notification'
 import CalculateSalary from './Components/CalculateSalary'
 import AddPayment from './Components/AddPayment'
 import PayEmployees from './Components/PayEmployees'
+import LiveLocation from './Components/LiveLocation'
 
 
 
@@ -55,6 +56,7 @@ function App() {
           <Route path='/dashboard/calculate-salary' element={<CalculateSalary />}></Route>
           <Route path='/dashboard/add-payment' element={<AddPayment />}></Route>
           <Route path='/dashboard/pay-employees' element={<PayEmployees />}></Route>
+          <Route path='/dashboard/live-location' element={<LiveLocation />}></Route>
           <Route path='/dashboard/add_employee' element={<AddEmployee />}></Route>
           <Route path='/dashboard/edit_employee/:id' element={<EditEmployee />}
           ></Route>

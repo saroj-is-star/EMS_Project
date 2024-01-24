@@ -21,11 +21,11 @@ const AdminRegistration = () => {
         formData.append('email', registration.email);
         formData.append('password', registration.password);
 
-        axios.post('http://localhost:3000/registartion/admin_registration', formData)
+        axios.post('http://localhost:3000/registration/admin_registration', formData)
             .then(result => {
                 if (result.data.Status) {
                     navigate('/adminlogin')
-                    console.log(result);
+                    // console.log(result);
                 } else {
                     alert(result.data.Error)
                 }

@@ -23,7 +23,7 @@ const Dashboard = () => {
           to="/dashboard"
           >
           <div className="text-center pt-2 text-white">
-            <img src="Images/EMS.png" alt="LOGO" className="logo_image" />
+            <img src="/Images/EMS.png" alt="LOGO" className="logo_image" />
           </div>
           </Link>
           <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white ">

@@ -33,33 +33,33 @@ const EmployeeMenu = () => {
         </ul>
       </div>
       <div className='emp-menu'>
-      <div className='d-flex  justify-content-center h-100'>
-        <div >
-            <img src='Images/emp-bg.png' alt="IMG" />
+        <div className='d-flex  justify-content-center align-items-center mt-5'>
+          <div >
+            <img src='/Images/emp-bg.png' alt="IMG" className='emp_menu_img'/>
           </div>
-      </div>
-      <div className='d-flex justify-content-center fs-4 fw-semibold'>
-        <div >
+        </div>
+        <div className='d-flex justify-content-center fs-4 fw-semibold'>
+          <div >
             <p>Add your Staff</p>
           </div>
-      </div>
-      <div className='d-flex justify-content-center fs-4 fw-lighter'>
-        <div >
+        </div>
+        <div className='d-flex justify-content-center fs-4 fw-lighter'>
+          <div >
             <p>Add your staff to get started.</p>
           </div>
-      </div>
-      <div className='d-flex  justify-content-center p-3'>
-        <div>
-        <div className='col'>
-          <Link to="/dashboard/add_employee" className="btn btn-success mx-2">
-            Add Employee
-          </Link>
-          <Link to="#" className="btn btn-success">
-            Add Multiple Employee
-          </Link>
         </div>
+        <div className='d-flex  justify-content-center p-3'>
+          <div>
+            <div className='col'>
+              <Link to="/dashboard/add_employee" className="btn btn-success mx-2">
+                Add Employee
+              </Link>
+              <Link to="#" className="btn btn-success">
+                Add Multiple Employee
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
       </div>
 
 

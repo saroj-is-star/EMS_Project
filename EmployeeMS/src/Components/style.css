@@ -151,7 +151,7 @@ ul li :hover {
 
 #dat{
     cursor: pointer;
-    height: 4.7vh;
+    height: 4.6vh;
     background-color: white;
 }
 .lab{
@@ -167,8 +167,9 @@ ul li :hover {
     border: 1px rgb(119, 117, 124) solid;
 }
 .category-bg{
-    width: 82vw;
+    width: 81vw;
     margin-left: 1px;
+    overflow-y: scroll;
 }
 
 .add_emp_bg{
@@ -176,29 +177,36 @@ ul li :hover {
     overflow-y: scroll;
 }
 .home_bg{
-    width: 82vw;
+    width: 81vw;
+    overflow-y: scroll;
 }
 .emp_menu_bg{
-    width: 82vw;
+    width: 81vw;
+    overflow: scroll;
 }
 .emp-menu{
-    height: 30vh;
+    height: 100vh;
+    
+}
+.emp_menu_img{
+    width: 200px;
+    margin-bottom: 2rem;
 }
 #attendence-bg {
     background-color: rgb(245, 238, 238);
     overflow: scroll;
-    width: 82vw;
+    width: 81vw;
     height: 100vh;
 }
 .calculate_salary_bg {
     background-color: rgb(245, 238, 238);
     overflow-y: scroll;
-    width: 82vw;
+    width: 81vw;
     height: 100vh;
 }
 .report_bg {
     background-color: rgb(245, 238, 238);
-    width: 82vw;
+    width: 81vw;
     height: 100vh;
     flex-wrap: nowrap;
     overflow-y: scroll;
@@ -247,4 +255,43 @@ ul li :hover {
         opacity: 1;
         box-shadow: 1px 0px 3px 3px rgb(218, 25, 25);
         }
+}
+.pay_employee_bg{
+    width: 81vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+}
+.img-pay-emp{
+    width: 400px;
+    height: 320px;
+    align-items: center;
+}
+.live-location-bg{
+    width: 81vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.leaflet-container{
+    height: 100vh;
+    width: 81vw;
+}
+.cluster-icon{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: #7680dd;
+    transform: translate(-25%, -25%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 1rem;
 }
