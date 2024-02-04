@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import 'leaflet/dist/leaflet.css';
 import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 import { Icon, divIcon, point } from 'leaflet';
@@ -21,7 +21,9 @@ const markers = [
 
 const customIcon = new Icon({
   iconUrl: "/Images/location-img.png",
-  iconSize: [38, 38]
+  iconSize: [38, 38],
+  iconAnchor: [17, 46],
+  popupAnchor: [3, -40]
 })
 
 const createCustomClusterIcon = (cluster) => {
@@ -31,10 +33,6 @@ const createCustomClusterIcon = (cluster) => {
     iconSize: point(33, 33, true)
   })
 }
-
-// const [location, setLocation] = useState({
-//   loaded: false
-// })
 
 const LiveLocation = () => {
   return (

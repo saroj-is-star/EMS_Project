@@ -23,8 +23,11 @@ import CalculateSalary from './Components/CalculateSalary'
 import AddPayment from './Components/AddPayment'
 import PayEmployees from './Components/PayEmployees'
 import LiveLocation from './Components/LiveLocation'
-
-
+import Document from './Components/Document'
+import Settings from './Components/Settings'
+import Support from './Components/Support'
+import SupportHome from './Components/SupportHome'
+import SupportAbout from './Components/SupportAbout'
 
 
 function App() {
@@ -38,6 +41,16 @@ function App() {
         <Route path='/adminlogin' element={<Login />}></Route>
         <Route path='/employee_login' element={<EmployeeLogin />}></Route>
         <Route path='/employee_details/:id' element={<EmployeeDetail />}></Route>
+
+        {/* Support Section Start*/}
+
+        <Route path='/support' element={<Support />}>
+          <Route path='/support/home' element={<SupportHome />}></Route>
+          <Route path='/support/support-about' element={<SupportAbout />}></Route>
+        </Route>
+        
+        {/* Support Section ends */}
+        
         <Route path='/dashboard' element={
           // <PrivateRoute>
             <Dashboard />
@@ -57,6 +70,8 @@ function App() {
           <Route path='/dashboard/add-payment' element={<AddPayment />}></Route>
           <Route path='/dashboard/pay-employees' element={<PayEmployees />}></Route>
           <Route path='/dashboard/live-location' element={<LiveLocation />}></Route>
+          <Route path='/dashboard/document' element={<Document />}></Route>
+          <Route path='/dashboard/settings' element={<Settings />}></Route>
           <Route path='/dashboard/add_employee' element={<AddEmployee />}></Route>
           <Route path='/dashboard/edit_employee/:id' element={<EditEmployee />}
           ></Route>

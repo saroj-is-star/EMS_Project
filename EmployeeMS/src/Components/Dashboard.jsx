@@ -23,7 +23,7 @@ const Dashboard = () => {
           to="/dashboard"
           >
           <div className="text-center pt-2 text-white">
-            <img src="/Images/EMS.png" alt="LOGO" className="logo_image" />
+            <img src="/Images/Acetech-logo.jpeg" alt="LOGO" className="logo_image" />
           </div>
           </Link>
           <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white ">
@@ -170,7 +170,7 @@ const Dashboard = () => {
               </li>
               <li className="w-100">
                 <NavLink
-                  to="/dashboard/contact-us"
+                  to="/support/home"
                   className="nav-link px-0 align-middle text-white"
                 >
                   <i className="fs-4 bi-question-circle ms-1"></i>
