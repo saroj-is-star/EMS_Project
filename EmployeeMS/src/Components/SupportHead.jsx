@@ -10,7 +10,7 @@ const SupportHead = () => {
                         <Link
                             to="/"
                             className=''>
-                            <img src="/Images/Acetech-logo.jpeg" alt="Logo" className='support-logo' />
+                            <img src="/Images/Acetech-logo-wide.png" alt="Logo" className='support-logo' />
 
                         </Link>
                     </span>

@@ -53,7 +53,7 @@ const SupportHome = () => {
         <div className="row row-cols-1 row-cols-md-3 g-0">
           <div className="col p-4 text-center">
             <div className="card h-100 img-home-2">
-              <img src="/Images/light-bulb.png" className="card-img-top img-size" alt="" />
+              <img src="/Images/layers.png" className="card-img-top img-size" alt="" />
               <div className="card-body">
                 <h5 className="card-title">Start Here</h5>
                 <p className="card-text">Getting started with the Acetech is easy and simple...</p>
@@ -62,7 +62,7 @@ const SupportHome = () => {
           </div>
           <div className="col p-4 text-center">
             <div className="card h-100 img-home-2">
-              <img src="/Images/light-bulb.png" className="card-img-top img-size" alt="" />
+              <img src="/Images/layers.png" className="card-img-top img-size" alt="" />
               <div className="card-body">
                 <h5 className="card-title">Attendance & Leaves</h5>
                 <p className="card-text">Managing attendance and leaves of staff with Acetech...</p>
@@ -71,11 +71,41 @@ const SupportHome = () => {
           </div>
           <div className="col p-4 text-center">
             <div className="card h-100 img-home-2">
-              <img src="/Images/light-bulb.png" className="card-img-top img-size" alt="" />
+              <img src="/Images/layers.png" className="card-img-top img-size" alt="" />
               <div className="card-body">
                 <h5 className="card-title">Salary and Payroll</h5>
                 <p className="card-text">Managing salary and payroll is challenging for companies...</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='support-home-bg-5 '>
+        <div className='s-h-bg-1'>
+          <h4>Most popular articles</h4>
+        </div>
+        <div className='s-h-bg-2'>
+          View all articles
+        </div>
+      </div>
+      <div className='support-home-bg-6 container-fluid'>
+        <div className='w-75 '>
+          <div className='row row-cols-1 row-cols-md-2 g-0'>
+            <div className='col s-h-bg-4 p-5'>
+                <h5><i className="fs-4 bi bi-journal-richtext" /> <span className='s-h-bg-8'>How to Add Employee in App?</span></h5>
+                <p className="s-h-bg-3">Modified on 14 December</p>
+            </div>
+            <div className='col p-5 s-h-bg-5'>
+                <h5><i className="fs-4 bi bi-journal-richtext" /> <span className='s-h-bg-8'>How to buy VIP Plan of App?</span></h5>
+                <p className="s-h-bg-3">Modified on 25 December</p>
+            </div>
+            <div className='col p-5 s-h-bg-6'>
+                <h5><i className="fs-4 bi bi-journal-richtext" /> <span className='s-h-bg-8'>How to Share Salary Slip With Your Employee?</span></h5>
+                <p className="s-h-bg-3">Modified on 30 October</p>
+            </div>
+            <div className='col p-5 s-h-bg-7'>
+                <h5><i className="fs-4 bi bi-journal-richtext" /> <span className='s-h-bg-8'>What is Our App?</span></h5>
+                <p className="s-h-bg-3">Modified on 06 January</p>
             </div>
           </div>
         </div>

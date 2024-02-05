@@ -23,7 +23,7 @@ const Dashboard = () => {
           to="/dashboard"
           >
           <div className="text-center pt-2 text-white">
-            <img src="/Images/Acetech-logo.jpeg" alt="LOGO" className="logo_image" />
+            <img src="/Images/Acetech-logo-1.png" alt="LOGO" className="logo_image" />
           </div>
           </Link>
           <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white ">
