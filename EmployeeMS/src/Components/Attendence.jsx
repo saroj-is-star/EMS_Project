@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { CSVLink, CSVDownload } from "react-csv";
 
 const Attendence = () => {
 
-    const [date, setDate] = useState()
+    const [date, setDate] = useState('')
     const [admins, setAdmins] = useState([])
     const [category, setCategory] = useState([]);
     const [employee, setEmployee] = useState([]);
-    const [records, setRecords]= useState([]);
+    const [records, setRecords] = useState([]);
 
     useEffect(() => {
         AdminRecords();
@@ -26,35 +27,74 @@ const Attendence = () => {
 
     useEffect(() => {
         axios
-          .get("http://localhost:3000/auth/category")
-          .then((result) => {
-            if (result.data.Status) {
-              setCategory(result.data.Result);
-            } else {
-              alert(result.data.Error);
-            }
-          })
-          .catch((err) => console.log(err));
-      }, []);
+            .get("http://localhost:3000/auth/category")
+            .then((result) => {
+                if (result.data.Status) {
+                    setCategory(result.data.Result);
+                } else {
+                    alert(result.data.Error);
+                }
+            })
+            .catch((err) => console.log(err));
+    }, []);
 
-      useEffect(() => {
+    useEffect(() => {
         axios
-          .get("http://localhost:3000/auth/employee")
-          .then((result) => {
-            if (result.data.Status) {
-              setEmployee(result.data.Result);
-              setRecords(result.data.Result);
-            } else {
-              alert(result.data.Error);
-            }
-          })
-          .catch((err) => console.log(err));
-      }, []);
+            .get("http://localhost:3000/auth/employee")
+            .then((result) => {
+                if (result.data.Status) {
+                    setEmployee(result.data.Result);
+                    setRecords(result.data.Result);
+                } else {
+                    alert(result.data.Error);
+                }
+            })
+            .catch((err) => console.log(err));
+    }, []);
 
-      const handleFilter = (event) => {
+    const handleFilter = (event) => {
         console.log(event);
-            setRecords(employee.filter(f => f.name.toLowerCase().includes(event.target.value)))
-      }
+        setRecords(employee.filter(f => f.name.toLowerCase().includes(event.target.value)))
+    }
+
+    const [punchIn, setPunchIn] = useState(Date)
+    const [punchOut, setPunchOut] = useState(Date)
+    const [status, setStatus] = useState('status_1')
+    
+
+    const status_1 = [
+        {
+            option1: 'Select'
+        },
+        {
+            option1: 'Present'
+        },
+        {
+            option1: 'Absent'
+        },
+        {
+            option1: 'Late'
+        },
+        {
+            option1: 'Half Day'
+        },
+        {
+            option1: 'Paid Leave'
+        }
+    ]
+
+    const handlepunchIn = (e) => {
+        setPunchIn(e.target.value)
+        console.log(`Punch In Time: ${punchIn}`);
+    }
+    const handlepunchOut = (e) => {
+        setPunchOut(e.target.value)
+        console.log(`Punch Out Time: ${punchOut}`);
+    }
+    const handleStatus = (e) => {
+        setStatus({...status_1, option1: e.target.value})
+        console.log({...status_1, option1: e.target.value});
+    }
 
     return (
         <>
@@ -66,7 +106,7 @@ const Attendence = () => {
                                 <span className='me-2'>
                                     <label className='me-2 '>Branch</label>
                                     <select className="bg-white rounded-1 border-1" >
-                                        <option selected>All Branches</option>
+                                        <option >All Branches</option>
                                         {admins.map((a) => {
                                             return <option value={a.id}>{a.name}</option>;
                                         })}
@@ -89,7 +129,9 @@ const Attendence = () => {
                             </div>
                             <div>
                                 <button type="button" className="btn btn-outline-primary btn-sm rounded-0 me-2">Mark All Absent As Present</button>
+                                <CSVLink data={employee} filename='DailyReports'>
                                 <button type="button" className="btn btn-primary btn-sm rounded-0"> <i className="bi bi-download me-2"></i>Daily Repoart</button>
+                                </CSVLink>
                             </div>
                         </div>
                     </div>
@@ -136,7 +178,9 @@ const Attendence = () => {
                                 <button type="button" className="btn btn-primary btn-sm rounded-0">Search</button>
                             </div>
                             <div>
-                                <button type="button" className="btn btn-outline-primary  rounded-0 me-0">Import Attendence</button>
+                                <CSVLink data={records} filename='RegisterEmployeeData'>
+                                <button type="button" className="btn btn-outline-primary  rounded-0 me-0">Export Attendence</button>
+                                </CSVLink>
                             </div>
                         </div>
                     </div>
@@ -156,41 +200,42 @@ const Attendence = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                {records.map((e) => (
-                                    <tr>
-                                        <td>
-                                                    <img
-                                                        src={`http://localhost:3000/Images/` + e.image}
-                                                        className="employee_image"
-                                                    />
-                                                </td>
-                                        <td>{e.name}</td>
-                                        <td>
-                                            <input 
-                                                type="time" 
-                                                placeholder='Punch In'
-                                            />
-                                        </td>
-                                        <td>
-                                            <input 
-                                                type="time" 
-                                                placeholder='Punch Out'
-                                            />
-                                        </td>
-                                        <td>
-                                            <select name="" id="" className='rounded-4'>
-                                                <option value="">Select</option>
-                                                <option value="">Present</option>
-                                                <option value="">Absent</option>
-                                                <option value="">Late</option>
-                                                <option value="">Half Day</option>
-                                                <option value="">Paid Leave</option>
-                                            </select>
-                                        </td>
-                                        {/* <td><button className='btn bg-info-subtle rounded-5'>Update</button></td> */}
-                                    </tr>
+                                    {records.map((e) => (
+                                        <tr>
+                                            <td>
+                                                <img
+                                                    src={`http://localhost:3000/Images/` + e.image}
+                                                    className="employee_image"
+                                                />
+                                            </td>
+                                            <td>{e.name}</td>
+                                            <td>
+                                                <input
+                                                    type="time"
+                                                    placeholder='Punch In'
+                                                    onChange={handlepunchIn}
+                                                />
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="time"
+                                                    placeholder='Punch Out'
+                                                    onChange={handlepunchOut}
+                                                />
+                                            </td>
+                                            <td>
+                                                <select name="" id="" className='rounded-4'
+                                                    onChange={handleStatus}>
+                                                        {/* <option value="">Select</option> */}
+                                                    {status_1.map((s) => {
+                                                        return <option >{s.option1}</option>;
+                                                    })}
+                                                </select>
+                                            </td>
+                                            {/* <td><button className='btn bg-info-subtle rounded-5'>Update</button></td> */}
+                                        </tr>
                                     ))}
-                                    
+
                                 </tbody>
                             </table>
                         </div>

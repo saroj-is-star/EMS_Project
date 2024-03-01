@@ -30,11 +30,11 @@ const Dashboard = () => {
           
             <Link
               to="/dashboard"
-              className=" align-items-center pb-3 mb-md-1 mt-md-3  text-white text-decoration-none"
+              className="pb-3 mb-md-1 mt-md-3  text-white text-decoration-none"
             >
               <div className="fw-bolder d-none d-sm-inline">
                 <span>
-                Acetech Work <br />Organization Pvt. Ltd
+                Acetech Group
                 </span>
                 <li className=" list-group-item disabled fs-6 fw-lighter">Company Code: abcdfjsn</li>
               </div>
