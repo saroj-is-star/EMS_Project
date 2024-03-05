@@ -55,7 +55,7 @@ const AddPayment = () => {
     },
     {
       name: 'CTC / MONTH',
-      selector: row => row.ctc_month,
+      selector: row => (row.salary)*12,
       sortable: true
     },
     {
