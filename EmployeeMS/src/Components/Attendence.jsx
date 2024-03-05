@@ -4,11 +4,13 @@ import { CSVLink, CSVDownload } from "react-csv";
 
 const Attendence = () => {
 
-    const [date, setDate] = useState('')
+    const [date, setDate] = useState(Date)
     const [admins, setAdmins] = useState([])
     const [category, setCategory] = useState([]);
     const [employee, setEmployee] = useState([]);
     const [records, setRecords] = useState([]);
+
+    
 
     useEffect(() => {
         AdminRecords();
@@ -95,6 +97,10 @@ const Attendence = () => {
         setStatus({...status_1, option1: e.target.value})
         console.log({...status_1, option1: e.target.value});
     }
+    const handleDate = (e)=>{
+        setDate(e.target.value)
+        console.log(date);
+    }
 
     return (
         <>
@@ -124,7 +130,7 @@ const Attendence = () => {
                                 </span>
                                 <span>
                                     <label className='me-2'>Date</label>
-                                    <input type="date" className='rounded-1 border-1' onChange={e => setDate(e.target.value)} />
+                                    <input type="date" className='rounded-1 border-1' onChange={handleDate} />
                                 </span>
                             </div>
                             <div>

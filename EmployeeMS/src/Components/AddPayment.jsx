@@ -1,13 +1,46 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import DataTable from "react-data-table-component"
+import axios from 'axios'
 
 const AddPayment = () => {
+
+  const [admins, setAdmins] = useState([])
+  const [employee, setEmployee] = useState([]);
+
+  useEffect(() => {
+    AdminRecords();
+  }, [])
+
+  const AdminRecords = () => {
+    axios.get('http://localhost:3000/auth/admin_records')
+      .then(result => {
+        if (result.data.Status) {
+          setAdmins(result.data.Result)
+        } else {
+          alert(result.data.Error)
+        }
+      })
+  }
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/auth/employee")
+      .then((result) => {
+        if (result.data.Status) {
+          setEmployee(result.data.Result);
+          setRecords(result.data.Result);
+        } else {
+          alert(result.data.Error);
+        }
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   const columns = [
     {
       name: 'EMP ID',
-      selector: row => row.emp_id,
+      selector: row => row.id,
       sortable: true
     },
     {
@@ -27,7 +60,7 @@ const AddPayment = () => {
     },
     {
       name: 'PAYABLE AMOUNT',
-      selector: row => row.payable_amount,
+      selector: row => row.salary,
       sortable: true
     },
     {
@@ -53,35 +86,27 @@ const AddPayment = () => {
   ]
   const data = [
     {
-      emp_id: 1,
-      name: "saroj",
-      joining_date: '08/01/2024',
-      ctc_month: 97310,
-      payable_amount: 123344,
-      paid_amount: 33333,
-      remaining_amount: 1222,
-      ytd_blance: 1233,
-      calculation_status: 'final',
-    },
-    {
-      emp_id: 1,
-      name: "Mohan",
-      joining_date: '08/01/2024',
-      ctc_month: 97310,
-      payable_amount: 123344,
-      paid_amount: 33333,
-      remaining_amount: 1222,
-      ytd_blance: 1233,
-      calculation_status: 'final',
+      // emp_id: 1,
+      // name: "",
+      // joining_date: '08/01/2024',
+      // ctc_month: 97310,
+      // payable_amount: 123344,
+      // paid_amount: 33333,
+      // remaining_amount: 1222,
+      // ytd_blance: 1233,
+      // calculation_status: 'final',
     },
   ]
   const [records, setRecords] = useState(data)
-  function handleFilter(event) {
-    const newData = data.filter(row => {
-      return row.name.toLowerCase().includes(event.target.value.toLowerCase())
-    })
-    setRecords(newData)
-  }
+  // function handleFilter(event) {
+  //   const newData = data.filter(row => {
+  //     return row.name.toLowerCase().includes(event.target.value.toLowerCase())
+  //   })
+  //   setRecords(newData)
+  // }
+  const handleFilter = (event) => {
+    setRecords(employee.filter(f => f.name.toLowerCase().includes(event.target.value)))
+}
   const tableHeaderstyle = {
     headCells: {
       style: {
@@ -120,7 +145,9 @@ const AddPayment = () => {
                 <label className='me-2'>Branch</label><br />
                 <select className="bg-white rounded-1 border-1 size-a" >
                   <option >All Branches</option>
-                  <option value="1">One company</option>
+                  {admins.map((a) => {
+                    return <option value={a.id}>{a.name}</option>;
+                  })}
                 </select>
               </span>
             </div>

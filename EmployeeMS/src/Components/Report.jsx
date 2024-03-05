@@ -1,9 +1,63 @@
-import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import { CSVLink, CSVDownload } from "react-csv";
 
 const Report = () => {
 
     const [date, setDate] = useState()
+    const [admins, setAdmins] = useState([])
+    const [category, setCategory] = useState([]);
+    const [employee, setEmployee] = useState([]);
+    const [records, setRecords] = useState([]);
+
+
+    useEffect(() => {
+        AdminRecords();
+    }, [])
+
+    const AdminRecords = () => {
+        axios.get('http://localhost:3000/auth/admin_records')
+            .then(result => {
+                if (result.data.Status) {
+                    setAdmins(result.data.Result)
+                } else {
+                    alert(result.data.Error)
+                }
+            })
+    }
+
+    useEffect(() => {
+        axios
+            .get("http://localhost:3000/auth/category")
+            .then((result) => {
+                if (result.data.Status) {
+                    setCategory(result.data.Result);
+                } else {
+                    alert(result.data.Error);
+                }
+            })
+            .catch((err) => console.log(err));
+    }, []);
+
+    useEffect(() => {
+        axios
+            .get("http://localhost:3000/auth/employee")
+            .then((result) => {
+                if (result.data.Status) {
+                    setEmployee(result.data.Result);
+                    setRecords(result.data.Result);
+                } else {
+                    alert(result.data.Error);
+                }
+            })
+            .catch((err) => console.log(err));
+    }, []);
+
+    const handleFilter = (event) => {
+        console.log(event);
+        setRecords(employee.filter(f => f.name.toLowerCase().includes(event.target.value)))
+    }
 
     const [toggle, setToggle] = useState(1)
     function updateToggle(id) {
@@ -51,11 +105,16 @@ const Report = () => {
                             <span className='me-2'>
                                 <label className='me-2 '>Report Type</label><br />
                                 <select className="bg-white rounded-1 border-1" >
-                                    <option selected>Attendance Summary Report</option>
+                                    <option value="">Select Report Type</option>
+                                    {admins.map((a) => {
+                                            return <option value={a.id}>{a.name}</option>;
+                                        })}
+
+                                    {/* <option selected>Attendance Summary Report</option>
                                     <option value="1">Deatailed Attendance Report</option>
                                     <option value="2">Late Arrival Report</option>
                                     <option value="3">Leave Report</option>
-                                    <option value="3">Over Time Report</option>
+                                    <option value="3">Over Time Report</option> */}
                                 </select>
                             </span>
                         </div>
@@ -64,9 +123,9 @@ const Report = () => {
                                 <label className='me-2'>Select Branch</label><br />
                                 <select className="bg-white rounded-1 border-1" >
                                     <option selected>All Branches</option>
-                                    <option value="1">One company</option>
-                                    <option value="2">Two company</option>
-                                    <option value="3">Three company</option>
+                                    {admins.map((a) => {
+                                            return <option value={a.id}>{a.name}</option>;
+                                        })}
                                 </select>
                             </span>
                         </div>
@@ -75,8 +134,9 @@ const Report = () => {
                                 <label className='me-2'>Select Department</label><br />
                                 <select className="bg-white rounded-1 border-1" >
                                     <option selected>All Deapartment</option>
-                                    <option value="1">One company</option>
-                                    <option value="2">Two company</option>
+                                    {category.map((c) => {
+                                            return <option value={c.id}>{c.name}</option>;
+                                        })}
                                 </select>
                             </span>
                         </div>
@@ -91,12 +151,13 @@ const Report = () => {
                                 <label className='me-2'>Format</label><br />
                                 <select className="bg-white rounded-1 border-1" >
                                     <option selected>XLSX</option>
-                                    <option value="1">PDF</option>
                                 </select>
                             </span>
                         </div>
                         <div className='mt-5'>
+                            <CSVLink data={employee} filename='GemeratedReports'>
                             <button type="button" class="btn btn-primary btn rounded-1">Generate Report</button>
+                            </CSVLink>
                         </div>
                         <div className='row text-secondary fs-6'>
                             <p className='fs-6 fw-lighter'>
@@ -114,12 +175,16 @@ const Report = () => {
                             <span className='me-2'>
                                 <label className='me-2 '>Report Type</label><br />
                                 <select className="bg-white rounded-1 border-1" >
-                                    <option selected>Salary Summary Report</option>
+                                <option value="">Select Report Type</option>
+                                    {admins.map((a) => {
+                                            return <option value={a.id}>{a.name}</option>;
+                                        })}
+                                    {/* <option selected>Salary Summary Report</option>
                                     <option value="1">Salary Deatailed Report</option>
                                     <option value="2">PF Chalan Report</option>
                                     <option value="3">Loan Report</option>
                                     <option value="3">TDS Summary Report</option>
-                                    <option value="3">Consolidated Report</option>
+                                    <option value="3">Consolidated Report</option> */}
                                 </select>
                             </span>
                         </div>
@@ -128,9 +193,9 @@ const Report = () => {
                                 <label className='me-2'>Select Branch</label><br />
                                 <select className="bg-white rounded-1 border-1" >
                                     <option selected>All Branches</option>
-                                    <option value="1">One company</option>
-                                    <option value="2">Two company</option>
-                                    <option value="3">Three company</option>
+                                    {admins.map((a) => {
+                                            return <option value={a.id}>{a.name}</option>;
+                                        })}
                                 </select>
                             </span>
                         </div>
@@ -139,8 +204,9 @@ const Report = () => {
                                 <label className='me-2'>Select Department</label><br />
                                 <select className="bg-white rounded-1 border-1" >
                                     <option selected>All Deapartment</option>
-                                    <option value="1">One company</option>
-                                    <option value="2">Two company</option>
+                                    {category.map((c) => {
+                                            return <option value={c.id}>{c.name}</option>;
+                                        })}
                                 </select>
                             </span>
                         </div>
@@ -155,12 +221,13 @@ const Report = () => {
                                 <label className='me-2'>Format</label><br />
                                 <select className="bg-white rounded-1 border-1" >
                                     <option selected>XLSX</option>
-                                    <option value="1">PDF</option>
                                 </select>
                             </span>
                         </div>
                         <div className='mt-5'>
+                        <CSVLink data={employee} filename='GemeratedReports'>
                             <button type="button" class="btn btn-primary btn rounded-1">Generate Report</button>
+                            </CSVLink>
                         </div>
                         <div className='row text-secondary'>
                             <p className='fs-6 fw-lighter'>
@@ -178,8 +245,12 @@ const Report = () => {
                             <span className='me-2'>
                                 <label className='me-2 '>Report Type</label><br />
                                 <select className="bg-white rounded-1 border-1" >
-                                    <option selected>Notes Report</option>
-                                    <option value="1">Report</option>
+                                    <option value="">Select Reports</option>
+                                {admins.map((a) => {
+                                            return <option value={a.id}>{a.name}</option>;
+                                        })}
+                                    {/* <option selected>Notes Report</option>
+                                    <option value="1">Report</option> */}
                                 </select>
                             </span>
                         </div>
@@ -188,9 +259,9 @@ const Report = () => {
                                 <label className='me-2'>Select Branch</label><br />
                                 <select className="bg-white rounded-1 border-1" >
                                     <option selected>All Branches</option>
-                                    <option value="1">One company</option>
-                                    <option value="2">Two company</option>
-                                    <option value="3">Three company</option>
+                                    {admins.map((a) => {
+                                            return <option value={a.id}>{a.name}</option>;
+                                        })}
                                 </select>
                             </span>
                         </div>
@@ -199,8 +270,9 @@ const Report = () => {
                                 <label className='me-2'>Select Department</label><br />
                                 <select className="bg-white rounded-1 border-1" >
                                     <option selected>All Deapartment</option>
-                                    <option value="1">One company</option>
-                                    <option value="2">Two company</option>
+                                    {category.map((c) => {
+                                            return <option value={c.id}>{c.name}</option>;
+                                        })}
                                 </select>
                             </span>
                         </div>
@@ -215,12 +287,13 @@ const Report = () => {
                                 <label className='me-2'>Format</label><br />
                                 <select className="bg-white rounded-1 border-1" >
                                     <option selected>XLSX</option>
-                                    <option value="1">PDF</option>
                                 </select>
                             </span>
                         </div>
                         <div className='mt-5'>
+                        <CSVLink data={employee} filename='GemeratedReports'>
                             <button type="button" class="btn btn-primary btn rounded-1">Generate Report</button>
+                            </CSVLink>
                         </div>
                         <div className='row text-secondary'>
                             <p className='fs-6 fw-lighter'>
@@ -238,11 +311,15 @@ const Report = () => {
                             <span className='me-2'>
                                 <label className='me-2 '>Report Type</label><br />
                                 <select className="bg-white rounded-1 border-1" >
-                                    <option selected>Attendance Summary Report</option>
+                                    <option value="">Select Summary Report</option>
+                                {admins.map((a) => {
+                                            return <option value={a.id}>{a.name}</option>;
+                                        })}
+                                    {/* <option selected>Attendance Summary Report</option>
                                     <option value="1">Deatailed Attendance Report</option>
                                     <option value="2">Late Arrival Report</option>
                                     <option value="3">Leave Report</option>
-                                    <option value="3">Over Time Report</option>
+                                    <option value="3">Over Time Report</option> */}
                                 </select>
                             </span>
                         </div>
@@ -251,9 +328,9 @@ const Report = () => {
                                 <label className='me-2'>Select Branch</label><br />
                                 <select className="bg-white rounded-1 border-1" >
                                     <option selected>All Branches</option>
-                                    <option value="1">One company</option>
-                                    <option value="2">Two company</option>
-                                    <option value="3">Three company</option>
+                                    {admins.map((a) => {
+                                            return <option value={a.id}>{a.name}</option>;
+                                        })}
                                 </select>
                             </span>
                         </div>
@@ -262,8 +339,9 @@ const Report = () => {
                                 <label className='me-2'>Select Department</label><br />
                                 <select className="bg-white rounded-1 border-1" >
                                     <option selected>All Deapartment</option>
-                                    <option value="1">One company</option>
-                                    <option value="2">Two company</option>
+                                    {category.map((c) => {
+                                            return <option value={c.id}>{c.name}</option>;
+                                        })}
                                 </select>
                             </span>
                         </div>
@@ -273,12 +351,13 @@ const Report = () => {
                                 <label className='me-2'>Format</label><br />
                                 <select className="bg-white rounded-1 border-1" >
                                     <option selected>CSV</option>
-                                    <option value="1">PDF</option>
                                 </select>
                             </span>
                         </div>
                         <div className='mt-5'>
+                        <CSVLink data={employee} filename='GemeratedReports'>
                             <button type="button" class="btn btn-primary btn rounded-1">Generate Report</button>
+                            </CSVLink>
                         </div>
                         <div className='row text-secondary'>
                             <p className='fs-6 fw-lighter'>
@@ -315,29 +394,31 @@ const Report = () => {
                                 </tr>
                             </thead>
                             <tbody>
+                            {records.map((e) => (
                                 <tr>
-                                    <td class="fw-light">Daily Attendance Report</td>
-                                    <td class="fw-light">All Branches</td>
+                                    <td class="fw-light">
+                                        {e.name} Daily Attendance Report
+                                    </td>
+                                    <td class="fw-light">
+                                        {admins.map((a) => {
+                                            return <option value={a.id}>{a.name}</option>;
+                                        })}
+                                    </td>
                                     <td class="fw-light">Jan 2024</td>
                                     <td class="fw-light">XLSX</td>
                                     <td class="fw-light">02-01-2024</td>
                                     <td>
-                                        <Link to='#' className='link-underline-light fw-light'>
+                                        <CSVLink data={employee} filename='GemeratedReports'>
+                                        {/* <Link to='#' className='link-underline-light fw-light'> */}
                                             Download
-                                        </Link>
+                                        {/* </Link> */}
+                                        </CSVLink>
+                                        
                                     </td>
                                 </tr>
+                                ))}
                             </tbody>
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
+                            
                         </table>
                     </div>
                 </div>
