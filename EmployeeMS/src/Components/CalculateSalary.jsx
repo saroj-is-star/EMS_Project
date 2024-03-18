@@ -159,7 +159,7 @@ const CalculateSalary = () => {
                                 </div>
                             </div>
                             <div className='col mt-3 me-2 align-content-center'>
-                                <table className="table table-bordered">
+                                <table className="table-content">
                                     <thead >
                                         <tr>
 
@@ -263,9 +263,9 @@ const CalculateSalary = () => {
                             <div 
                             className='col mt-3 me-2 align-content-center' 
                             ref={componentPDF}
-                            style={{width:'100%'}}
+                            // style={{width:'100%'}}
                             >
-                                <table className="table table-bordered">
+                                <table className="table-content">
                                     <thead >
                                         <tr>
                                             <th className="fw-medium">EMP ID</th>

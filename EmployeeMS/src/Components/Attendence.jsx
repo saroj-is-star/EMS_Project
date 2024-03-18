@@ -185,7 +185,7 @@ const Attendence = () => {
                             </div>
                             <div>
                                 <CSVLink data={records} filename='RegisterEmployeeData'>
-                                <button type="button" className="btn btn-outline-primary  rounded-0 me-0">Export Attendence</button>
+                                <button type="button" className="btn btn-outline-primary  rounded-0 me-0">Export Attendance</button>
                                 </CSVLink>
                             </div>
                         </div>
@@ -194,7 +194,8 @@ const Attendence = () => {
                 <div className='row'>
                     <div className='col'>
                         <div>
-                            <table className="table table-bordered">
+                        {/* table table-bordered */}
+                            <table className="table-content">
                                 <thead>
                                     <tr>
                                         <th scope="col">Image</th>

@@ -37,7 +37,7 @@ const Document = () => {
 
     return (
         <div className='document-bg'>
-            <div className='document-bg-2 fs-5'>
+            <div className='document-bg-2 fs-5 bg-head'>
                 Documents
             </div>
             <div className='document-bg-3'>
@@ -55,7 +55,7 @@ const Document = () => {
                                     </Link>
                                 </div>
                             <div className="">
-                                <table className="table">
+                                <table className="table-content">
                                     <thead>
                                         <tr>
                                             <th>Name</th>

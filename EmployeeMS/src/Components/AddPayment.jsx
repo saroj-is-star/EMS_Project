@@ -112,7 +112,8 @@ const AddPayment = () => {
       style: {
         fontWeight: "bold",
         fontSize: "14px",
-        backgroundColor: "pink",
+        backgroundColor: "#668cf5",
+        color: "#fff",
       }
     }
   }

@@ -6,7 +6,7 @@ const EmployeeMenu = () => {
 
   return (
     <div className='row ms-1 me-1 emp_menu_bg'>
-      <div className="p-2 d-flex justify-content-center shadow">
+      <div className="p-2 d-flex justify-content-center shadow bg-head">
         <h4>Manage Emoployee</h4>
       </div>
       <div className="col">
@@ -16,7 +16,7 @@ const EmployeeMenu = () => {
               className="nav-link text-dark active" aria-current="page">Employee Details</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link disabled" aria-disabled="true">Attendence Details</a>
+            <a className="nav-link disabled" aria-disabled="true">Attendance Details</a>
           </li>
           <li className="nav-item">
             <a className="nav-link disabled" aria-disabled="true">Bank Details</a>

@@ -382,7 +382,7 @@ const Report = () => {
                 </div>
                 <div className='container w-full report_menu_bg rounded-0 row'>
                     <div className='col mt-3 align-content-center'>
-                        <table className="table table-bordered">
+                        <table className="table-content">
                             <thead >
                                 <tr>
                                     <th class="fw-medium">REPORT TYPE</th>

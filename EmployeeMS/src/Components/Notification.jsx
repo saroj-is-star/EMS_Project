@@ -97,7 +97,7 @@ const Notification = () => {
 
           </div>
           <div className='col mt-3 align-content-center'>
-            <table className="table table-bordered">
+            <table className="table-content">
               <thead >
                 <tr>
                   <th class="fw-medium">EMPLOYEE NAME</th>

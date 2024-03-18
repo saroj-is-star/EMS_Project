@@ -3,7 +3,7 @@ import React from 'react'
 const Settings = () => {
   return (
     <div className='setting-bg'>
-      <div className='setting-bg-2'>
+      <div className='setting-bg-2 bg-head'>
         Settings
       </div>
       <div className='setting-bg-3'>

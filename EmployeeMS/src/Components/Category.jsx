@@ -18,9 +18,10 @@ const Category = () => {
     }, [])
   return (
     <>
+    <div className='w-100'>
     <div className='row category-bg'>
         
-        <div className=" p-2 d-flex justify-content-center shadow">
+        <div className=" p-2 d-flex justify-content-center shadow bg-head">
                 <h4>Cetegory List</h4>
             </div>
             <div className=' px-5 mt-3 '>
@@ -44,6 +45,7 @@ const Category = () => {
             </table>
         </div>
         </div>
+    </div>
     </div>
     </>
   )

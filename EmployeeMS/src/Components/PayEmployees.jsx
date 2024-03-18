@@ -2,7 +2,7 @@ import React from 'react'
 
 const PayEmployees = () => {
   return (
-    <div className='pay_employee_bg'>
+    <div className='pay_employee_bg bg-head'>
       <div className='text-center'>
       <div >
         <img src="/Images/pay-emp-bg.png" alt="PayEmpBg" className='img-pay-emp'/>
