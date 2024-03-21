@@ -105,13 +105,13 @@ const Home = () => {
 
   let time = new Date().toLocaleTimeString();
   const [ctime, setCtime] = useState(time);
-  
-  const updateTime = ()=> {
+
+  const updateTime = () => {
     time = new Date().toLocaleTimeString();
     setCtime(time);
   }
-  setInterval(updateTime,1000);
-  
+  setInterval(updateTime, 1000);
+
 
   return (
     <>
@@ -121,35 +121,42 @@ const Home = () => {
         </div>
         <div className='row row-cols-1 row-cols-md-4 g-0 pe-3'>
           <div className='col '>
-            <div className='dash-1'>
-              <div className='d-flex justify-content-between dash-2 p-2'>
-                <div className='d-flex'>
-                  <div className='me-2 icon-home'>
-                    <i className="bi bi-people-fill icon-home-1"></i>
+            <Link
+            to='/dashboard/currentemployee'
+            className='nav-link'>
+              <div className='dash-1'>
+                <div className='d-flex justify-content-between dash-2 p-2'>
+                  <div className='d-flex'>
+                    <div className='me-2 icon-home'>
+                      <i className="bi bi-people-fill icon-home-1"></i>
+                    </div>
+                    <div className='dash-font'>
+                      Current Employees
+                    </div>
                   </div>
-                  <div className='dash-font'>
-                    Current Employees
+                  <div className='dash-font-1'>
+                    {employeeTotal}
                   </div>
                 </div>
-                <div className='dash-font-1'>
-                  {employeeTotal}
+                <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
+                  <div>Male :</div>
+                  <div>{employeeTotal}</div>
+                </div>
+                <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
+                  <div>Female :</div>
+                  <div>{employeeTotal}</div>
+                </div>
+                <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
+                  <div>Trans :</div>
+                  <div>{employeeTotal}</div>
                 </div>
               </div>
-              <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
-                <div>Male :</div>
-                <div>{employeeTotal}</div>
-              </div>
-              <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
-                <div>Female :</div>
-                <div>{employeeTotal}</div>
-              </div>
-              <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
-                <div>Trans :</div>
-                <div>{employeeTotal}</div>
-              </div>
-            </div>
+            </Link>
           </div>
           <div className='col '>
+          <Link
+            to='/dashboard/dailyReport'
+            className='nav-link'>
             <div className='dash-1'>
               <div className='d-flex justify-content-between dash-3 p-2'>
                 <div className='d-flex'>
@@ -177,6 +184,7 @@ const Home = () => {
                 <div>{employeeTotal}</div>
               </div>
             </div>
+            </Link>
           </div>
           <div className='col '>
             <div className='dash-1'>
@@ -373,7 +381,7 @@ const Home = () => {
                             onChange={(date) => handleDate(date)}
                             showMonthYearPicker
                             maxDate={new Date()}
-                            // customInput={<CustomInput />}
+                          // customInput={<CustomInput />}
                           />
                         </span>
                         <span className='icon'>
@@ -432,7 +440,7 @@ const Home = () => {
                     </select>
                   </div>
                 </div>
-      
+
                 <div className=' table-size-args'>
                   <table className="home-leave-table">
                     <thead>
@@ -478,9 +486,9 @@ const Home = () => {
                           <td>
                             {e.to_date}
                           </td>
-                            <td>
+                          <td>
                             {e.status}
-                            </td>
+                          </td>
                         </tr>
                       ))}
 
@@ -491,7 +499,7 @@ const Home = () => {
                   <Link
                     to='#'
                     className='nav-link'>
-                      View Leave Requests
+                    View Leave Requests
                   </Link>
                 </div>
               </div>
@@ -514,9 +522,9 @@ const Home = () => {
                   </div>
                 </div>
                 <div className='calendr'>
-                    <Calendar className='calendr-1 border-0 rounded-4'
-                      onChange={setCalDate}
-                      value={calDate}/>
+                  <Calendar className='calendr-1 border-0 rounded-4'
+                    onChange={setCalDate}
+                    value={calDate} />
                 </div>
               </div>
             </div>
@@ -529,7 +537,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-      
+
                 <div className=' table-size-args-1'>
                   <table className="home-leave-table">
                     <thead>
@@ -549,7 +557,7 @@ const Home = () => {
                           </td>
                           <td>
                             <div className='d-flex'>
-                              
+
                               <div className='ms-2 d-inline'>
                                 <div>
                                   {e.name}
@@ -579,7 +587,7 @@ const Home = () => {
                   <Link
                     to='#'
                     className='nav-link'>
-                      View Leave Requests
+                    View Leave Requests
                   </Link>
                 </div>
               </div>

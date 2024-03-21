@@ -213,7 +213,7 @@ ul li :hover {
     width: 100%;
     height: 100%;
     overflow: scroll;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
 }
 
 .emp_menu_bg {
@@ -1193,11 +1193,11 @@ input.checkbox-size {
     border: 1px solid #f7dfdf;
     border-radius: 15px;
     margin-top: 10px;
-    height: 303px;
+    height: 343px;
 }
 
 .table-size-args-1 {
-    height: 233px;
+    height: 278px;
     overflow-y: scroll;
 }
 
@@ -1297,3 +1297,205 @@ input.checkbox-size {
   textarea:focus, input:focus{
     outline: none;
   }
+
+
+  .currentEmplyee-bg{
+    width: 81vw;
+    height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 80px;
+  }
+  .currentEmplyee-bg-1{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* height: 70px; */
+    padding: 20px 7px 15px 15px;
+  }
+  .currentEmplyee-bg-2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.334;
+    letter-spacing: 0em;
+  }
+  .currentEmplyee-bg-3{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+  }
+  .currentEmplyee-bg-3 div{
+    margin: 0 4px;
+  }
+  .currentEmplyee-btn{
+    font-size: 13px;
+    font-weight: 700;
+    background: rgb(25, 118, 210);
+    padding: 4px 5px 4px 15px;
+    border-radius: 5px;
+    color: #fff;
+    width: 230px;
+    height: 33.5px;
+  }
+  .icon-2{
+    font-size: 18px;
+    padding-right: 5px;
+    outline: none;
+    border: none;
+  }
+  .currentEmplyee-btn:hover{
+    background: rgb(26, 131, 236);;
+  }
+  .currentEmplyee-btn-1{
+    font-size: 13px;
+    font-weight: 700;
+    background: rgb(25, 118, 210);
+    padding: 7px 5px 7px 12px;
+    border-radius: 5px;
+    color: #fff;
+    width: 68px;
+    height: 33.5px;
+  }
+  .currentEmplyee-btn-2{
+    font-size: 13px;
+    font-weight: 700;
+    width: 90px;
+    height: 33.5px;
+    background: #fff;
+    border: 1px solid;
+    border-radius: 5px;
+    color: gray;
+  }
+  .currentEmplyee-btn-3{
+    font-size: 13px;
+    font-weight: 700;
+    background: rgb(25, 118, 210);
+    padding: 4px 5px 4px 12px;
+    border-radius: 5px;
+    color: #fff;
+    width: 115px;
+    height: 33.5px;
+  }
+  .currentEmplyee-btn-4{
+    font-size: 13px;
+    font-weight: 700;
+    background: rgb(25, 118, 210);
+    padding: 7px 5px 7px 12px;
+    border-radius: 5px;
+    color: #fff;
+    width: 118px;
+    height: 33.5px;
+  }
+  .currentEmplyee-btn-1:hover{
+    background: rgb(26, 131, 236);;
+  }
+  .currentEmplyee-btn-4:hover{
+    background: rgb(26, 131, 236);;
+  }
+  .currentEmplyee-btn-3:hover{
+    background: rgb(26, 131, 236);;
+  }
+
+ /* field set type input */
+ 
+.body-fldset{
+    background: #fff;
+    width: 140px;
+    display: grid;
+    place-items: center;
+    color: #000;
+  }
+.form-fldset{
+    position: relative;
+    width: 100%;
+}
+.text-fldset{
+    border: 1px solid rgb(197, 195, 195);
+    border-radius: 5px;
+    outline: none;
+    background: none;
+    padding: 5px;
+    color: rgb(82, 80, 80);
+    width: calc(87% + 19px);
+    height: 33.5px;
+}
+.text-fldset:hover{
+    border: 1px solid #000;
+}
+.text-fldset:focus{
+    border: 1.5px solid #000;
+}
+.label-fldset{
+    position: absolute;
+    top: 0.4rem;
+    left: 0.8rem;
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+.text-fldset:focus ~ .label-fldset, .text-fldset:not(:placeholder-shown).text-fldset:not(:focus) ~.label-fldset{
+    top: -0.4rem;
+    left: 0.5rem;
+    font-size: 9px;
+    background: #fff;
+    padding: 0 3px;
+}
+
+/* for input field */
+
+.body-fldset-1{
+    background: #fff;
+    /* width: 140px; */
+    /* display: grid; */
+    /* place-items: center; */
+    color: #000;
+  }
+.form-fldset-1{
+    position: relative;
+    /* width: 100%; */
+}
+.text-fldset-1{
+    border: 1px solid rgb(197, 195, 195);
+    border-radius: 5px;
+    outline: none;
+    background: none;
+    padding: 5px;
+    color: #000;
+    /* width: calc(87% + 19px); */
+    height: 33.5px;
+}
+.text-fldset-1:hover{
+    border: 1px solid #000;
+}
+.text-fldset-1:focus{
+    border: 1.5px solid #000;
+}
+
+.label-fldset-1{
+    position: absolute;
+    top: 0.3rem;
+    left: 7.8rem;
+    cursor: text;
+    color: #a7aaac;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+.text-fldset-1:focus ~ .label-fldset-1, .text-fldset-1:not(:placeholder-shown).text-fldset-1:not(:focus) ~.label-fldset-1{
+    top: -0.4rem;
+    left: 0.5rem;
+    font-size: 9px;
+    background: #fff;
+    color: #000;
+    padding: 0 3px;
+}
+/* field set type ends */
+
+.section-2{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* height: 50px; */
+    padding: 10px 15px 15px 15px;
+  }
+
+ 

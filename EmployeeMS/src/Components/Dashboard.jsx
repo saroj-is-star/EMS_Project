@@ -37,7 +37,7 @@ const Dashboard = () => {
   }
   return (
     <>
-      <div className="header-main">
+      <div className="header-main shadow">
         <div className="header-main-1">
           <div className="fs-3">
             <i className="bi bi-list" role="button"></i>
