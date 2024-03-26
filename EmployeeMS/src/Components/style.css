@@ -877,8 +877,8 @@ input.checkbox-size {
 }
 
 .header-main-2 {
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .header-main-3 {
@@ -922,7 +922,7 @@ input.checkbox-size {
 }
 
 .logo_profile {
-    width: 35px;
+    width: 55px;
     height: 35px;
     background: #000;
     border-radius: 50%;
@@ -938,12 +938,12 @@ input.checkbox-size {
     }
 
     .header-main-2 {
-        font-size: 25px;
-        font-weight: 200;
+        font-size: 17px;
+        font-weight: 100;
     }
 
     .header-main-1 {
-        width: 190vw;
+        width: 430vw;
     }
 }
 
@@ -1308,9 +1308,9 @@ input.checkbox-size {
   .currentEmplyee-bg-1{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     /* height: 70px; */
-    padding: 20px 7px 15px 15px;
+    margin: 20px 7px 15px 15px;
   }
   .currentEmplyee-bg-2{
     font-size: 1.5rem;
@@ -1321,7 +1321,7 @@ input.checkbox-size {
   .currentEmplyee-bg-3{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: center;
     gap: 5px;
   }
@@ -1492,10 +1492,239 @@ input.checkbox-size {
 .section-2{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 15px;
     /* height: 50px; */
-    padding: 10px 15px 15px 15px;
+    margin: 10px 15px 15px 15px;
   }
 
- 
+ /* Daily Report Section */
+
+ .dailyReport-bg{
+    width: 81vw;
+    height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 80px;
+ }
+
+ .dailyreport-btn-1{
+    font-size: 13px;
+    font-weight: 700;
+    background: rgb(25, 118, 210);
+    padding: 7px 10px 7px 12px;
+    border-radius: 5px;
+    color: #fff;
+    /* width: 118px; */
+    height: 33.5px;
+  }
+  .dailyreport-btn-1 i{
+    font-size: 25px;
+    line-height: 0.334;
+  }
+ .dailyreport-btn-2{
+    font-size: 13px;
+    font-weight: 700;
+    background: #fff;
+    padding: 7px 10px 7px 12px;
+    border: 1px solid rgb(25, 118, 210);
+    border-radius: 5px;
+    color: rgb(25, 118, 210);
+    /* width: 118px; */
+    height: 33.5px;
+  }
+
+  .dailyReportTable {
+    border-collapse: collapse;
+    margin: 0px 0;
+    font-size: 12px;
+    min-width: 100%;
+}
+
+.dailyReportTable thead tr {
+    background-image: linear-gradient(rgb(25, 118, 210), rgb(97, 144, 190));
+    font-size: 11px;
+    position: sticky;
+    top: 0px;
+    height: 35px;
+    color: #fff;
+}
+
+.dailyReportTable th,
+.dailyReportTable td {
+    padding: 3px 3px;
+    border: 1px solid rgb(221, 216, 216);
+}
+
+.dailyReportTable tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.dailyReportTable tbody tr:nth-of-type(even){
+    background-image: linear-gradient(rgb(219, 250, 165), rgb(242, 250, 228));
+}
+.status-field{
+    background-color: rgb(131, 174, 55); 
+    text-align: center; 
+    border-radius: 15px; 
+    min-width: 80px; 
+    padding: 3px; 
+    color: white
+}
+
+/* filter part start */
+
+.dropDownReportFilter {
+    position: absolute;
+    /* top: 3.4rem; */
+    top: 0rem;
+    right: 1.5rem;
+    width: 290px;
+    height: 100%;
+    /* padding: 1px 5px 0px 5px; */
+    border-radius: 0px;
+    background-color: #fff;
+    border: 1px solid rgb(230, 227, 227);
+}
+
+/* .dropDownReportFilter::before {
+    content: '';
+    position: absolute;
+    top: -0.5rem;
+    right: 1.1rem;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    background-color: #fff;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+} */
+
+.ReportFilter-1{
+    display: flex;
+    justify-content: space-between;
+    line-height: 20px;
+    border-bottom: 1px solid rgb(230, 227, 227);
+    padding-bottom: 5px;
+}
+.ReportFilter-2{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    padding-top: 5px;
+    padding-left: 7px;
+}
+.ReportFilter-3{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.ReportFilter-4{
+    border-bottom: 1px solid rgb(230, 227, 227);
+    padding: 10px;
+}
+
+.dailyReport-body-fldset-1{
+    background: #fff;
+    width: 270px;
+    display: grid;
+    place-items: center;
+    color: #000;
+  }
+.dailyReport-form-fldset-1{
+    position: relative;
+    width: 100%;
+}
+.dailyReport-text-fldset-1{
+    border: 1px solid rgb(197, 195, 195);
+    border-radius: 5px;
+    outline: none;
+    background: none;
+    padding: 5px;
+    color: #000;
+    width: calc(100% + 0px);
+    height: 33.5px;
+}
+.dailyReport-text-fldset-1:hover{
+    border: 1px solid #000;
+}
+.dailyReport-text-fldset-1:focus{
+    border: 1.5px solid #000;
+}
+
+.dailyReport-label-fldset-1{
+    position: absolute;
+    top: 0.3rem;
+    left: 0.8rem;
+    cursor: text;
+    color: #a7aaac;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+.dailyReport-text-fldset-1:focus ~ .dailyReport-label-fldset-1, .dailyReport-text-fldset-1:not(:placeholder-shown).dailyReport-text-fldset-1:not(:focus) ~.dailyReport-label-fldset-1{
+    top: -0.4rem;
+    left: 0.5rem;
+    font-size: 9px;
+    background: #fff;
+    color: #000;
+    padding: 0 3px;
+}
+
+.report-font-1 {
+    font-size: 16px;
+}
+.report-DateContainer{
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 33.5px;
+    border: 1px solid rgb(197, 195, 195);
+    border-radius: 5px;
+    background-color: white;
+  }
+.report-dateInput {
+    width: 100%;
+    height: 100%;
+  }
+.report-dateInput input {
+    width: calc(90% + 25px);
+    height: 33.5px; 
+    border: none;
+    background: transparent;
+    z-index: 1;
+    margin-left: 10px;
+    /* color: rgb(110, 110, 110); */
+  }
+.report-icon {
+    width: 29px;
+    margin-top: 0.9px;
+    /* color: rgb(110, 110, 110); */
+  }
+  textarea:focus, input:focus{
+    outline: none;
+  }
+  .report-DateContainer:hover{
+    border: 1px solid #000;
+  }
+
+  .ReportFilter-5{
+    background: rgb(219, 219, 221);
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-weight: 600;
+  }
+  .ReportFilter-5:hover{
+    background: rgb(197, 197, 202);
+  }
+  .ReportFilter-6{
+    background: rgb(25, 118, 210);
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    font-weight: 600;
+  }
+  .ReportFilter-6:hover{
+    background: rgb(22, 92, 161);
+  }
+/* filter part ends */
+
+ /* Daily Report Section ends*/

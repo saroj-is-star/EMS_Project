@@ -46,7 +46,7 @@ const Dashboard = () => {
             <img src="/Images/Acetech-logo-1.png" alt="LOGO" className="logo_image" role="button" />
           </div>
           <div className="header-main-2" role="button">
-            Acetech Group
+          Employee Management System
           </div>
         </div>
         <div className="header-main-3">

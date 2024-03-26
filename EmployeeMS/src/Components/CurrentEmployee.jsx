@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import DataTable from "react-data-table-component"
 import axios from 'axios'
 
 const CurrentEmployee = () => {
     const [employee, setEmployee] = useState([]);
+    const [records, setRecords] = useState([])
+    
 
 
     useEffect(() => {
@@ -19,71 +20,6 @@ const CurrentEmployee = () => {
             })
             .catch((err) => console.log(err));
     }, []);
-
-
-    const columns = [
-        {
-            name: 'EMP ID',
-            selector: row => row.id,
-            sortable: true
-        },
-        {
-            name: 'NAME',
-            selector: row => row.name,
-            sortable: true
-        },
-        {
-            name: 'JOINING DATE',
-            selector: row => row.joining_date,
-            sortable: true
-        },
-        {
-            name: 'CTC / MONTH',
-            selector: row => (row.salary) * 12,
-            sortable: true
-        },
-        {
-            name: 'PAYABLE AMOUNT',
-            selector: row => row.salary,
-            sortable: true
-        },
-        {
-            name: 'PAID AMOUNT',
-            selector: row => row.paid_amount,
-            sortable: true
-        },
-        {
-            name: 'REMAINING AMOUNT',
-            selector: row => row.remaining_amount,
-            sortable: true
-        },
-        {
-            name: 'YTD BLANCE',
-            selector: row => row.ytd_blance,
-            sortable: true
-        },
-        {
-            name: 'CALCULATION STATUS',
-            selector: row => row.calculation_status,
-            sortable: true
-        },
-    ]
-    const data = [
-        {
-
-        },
-    ]
-    const tableHeaderstyle = {
-        headCells: {
-            style: {
-                fontWeight: "bold",
-                fontSize: "13px",
-                backgroundColor: "#668cf5",
-                color: "#fff",
-            }
-        }
-    }
-    const [records, setRecords] = useState(data)
     const handleFilter = (event) => {
         setRecords(employee.filter(f => f.name.toLowerCase().includes(event.target.value)))
     }
@@ -235,17 +171,87 @@ const CurrentEmployee = () => {
                 </div>
             </div>
             <div className='ps-3 pe-3'>
-                <div className='text-center rounded-2'>
-                    <DataTable
-                        columns={columns}
-                        // data={data} 
-                        data={records}
-                        selectableRows
-                        pagination
-                        selectableRowsHighlight
-                        highlightOnHover
-                        customStyles={tableHeaderstyle}
-                    ></DataTable>
+                <div className='w-100 h-100 text-center'>
+                <table className="dailyReportTable">
+                    <thead>
+                      <tr>
+                        <th>Emp Id</th>
+                        <th>Employee</th>
+                        <th>Department</th>
+                        <th>Father's Name</th>
+                        <th>Phone no</th>
+                        <th>Email</th>
+                        <th>Joining Date</th>
+                        <th>Status</th>
+                        <th>Emp Type</th>
+                        <th>Shift</th>
+                        <th>Site</th>
+                        <th>Primary Site</th>
+                        <th>Info Action</th>
+                      </tr>
+                    </thead>
+                    <tbody >
+                      {records.map((e) => (
+                        <tr>
+                          <td>
+                            {e.id}
+                          </td>
+                          <td>
+                            <div className='d-flex'>
+                              <div>
+                                <img
+                                  src={`http://localhost:3000/Images/` + e.image}
+                                  className="home_leave_image"
+                                />
+                              </div>
+                              <div className='ms-2 d-inline'>
+                                <div>
+                                  {e.name}
+                                </div>
+                                <div>
+                                  {e.designation}General Manager
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            {e.reason}
+                          </td>
+                          <td>
+                            {e.from_date}
+                          </td>
+                          <td>
+                            {e.to_date}
+                          </td>
+                          <td>
+                            {e.status}
+                          </td>
+                          <td>
+                            {e.status}
+                          </td>
+                          <td>
+                            {e.status}
+                          </td>
+                          <td>
+                            {e.status}
+                          </td>
+                          <td>
+                            {e.status}
+                          </td>
+                          <td>
+                            {e.status}
+                          </td>
+                          <td>
+                            {e.status}
+                          </td>
+                          <td>
+                            {e.status}
+                          </td>
+                        </tr>
+                      ))}
+
+                    </tbody>
+                  </table>
                 </div>
             </div>
         </div>
