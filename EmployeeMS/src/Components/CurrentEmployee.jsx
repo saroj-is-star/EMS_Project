@@ -161,9 +161,9 @@ const CurrentEmployee = () => {
                     <div className='body-fldset-1'>
                         <div className='form-fldset-1'>
                             <input type="text" placeholder='' className='text-fldset-1'
-                                onChange={handleFilter} />
+                                onChange={handleFilter} id='searchInput'/>
 
-                            <label htmlFor="" className='label-fldset-1'>
+                            <label htmlFor="searchInput" className='label-fldset-1'>
                                 Search <i className="bi bi-search icon-3" />
                             </label>
                         </div>

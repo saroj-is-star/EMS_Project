@@ -54,9 +54,9 @@ function ReportFilter({ onClose, setOpenReportFilterSearchText, setFilterbyDepar
                     <div className='dailyReport-form-fldset-1'>
                         <input type="text" placeholder='' className='dailyReport-text-fldset-1'
                          onChange={handleFilter}
-                        />
+                        id='searchInput'/>
 
-                        <label htmlFor="" className='dailyReport-label-fldset-1'>
+                        <label htmlFor="searchInput" className='dailyReport-label-fldset-1'>
                             Search Employee
                             {/* <i className="bi bi-search icon-3" /> */}
                         </label>

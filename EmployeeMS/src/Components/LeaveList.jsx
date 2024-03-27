@@ -127,10 +127,10 @@ const LeaveList = () => {
                         <div className='leaveList-body-fldset-1'>
                             <div className='leaveList-form-fldset-1'>
                                 <input type="text" placeholder='' className='leaveList-text-fldset-1'
-                                    onChange={handleFilter} />
+                                    onChange={handleFilter} id='searchInput'/>
 
-                                <label htmlFor="" className='leaveList-label-fldset-1'>
-                                    Search <i className="bi bi-search icon-3" />
+                                <label htmlFor="searchInput" className='leaveList-label-fldset-1'>
+                                    Search by name <i className="bi bi-search icon-3" />
                                 </label>
                             </div>
                         </div>
