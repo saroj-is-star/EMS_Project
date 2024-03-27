@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-function ReportFilter({ onClose }) {
+function ReportFilter({ onClose, setOpenReportFilterSearchText, setFilterbyDepartment, setFilterbySite, setFilterbyShift }) {
 
     const [date, setDate] = useState(new Date())
     const handleDate = (dt) => {
@@ -25,9 +25,19 @@ function ReportFilter({ onClose }) {
             })
             .catch((err) => console.log(err));
     }, []);
-    // const handleFilter = (event) => {
-    //     setRecords(employee.filter(f => f.name.toLowerCase().includes(event.target.value)))
-    // }
+    const handleFilter = (event) => {
+        setOpenReportFilterSearchText(event.target.value)
+    }
+    const handleFilterbyDepartment = (event) => {
+        setFilterbyDepartment(event.target.value)
+    }
+    const handleFilterbySite = (event) => {
+        setFilterbySite(event.target.value)
+    }
+    const handleFilterbyShift = (event) => {
+        setFilterbyShift(event.target.value)
+    }
+
 
     return (
         <div className='dropDownReportFilter'>
@@ -43,7 +53,7 @@ function ReportFilter({ onClose }) {
                 <div className='dailyReport-body-fldset-1'>
                     <div className='dailyReport-form-fldset-1'>
                         <input type="text" placeholder='' className='dailyReport-text-fldset-1'
-                        // onChange={handleFilter}
+                         onChange={handleFilter}
                         />
 
                         <label htmlFor="" className='dailyReport-label-fldset-1'>
@@ -77,10 +87,10 @@ function ReportFilter({ onClose }) {
                 <div className='dailyReport-body-fldset-1'>
                     <div className='dailyReport-form-fldset-1'>
                         <select name="" id="" placeholder=''
-                            className='dailyReport-text-fldset-1'>
+                            className='dailyReport-text-fldset-1' onChange={handleFilterbySite}>
                             <option value="">Site</option>
                             {employee.map((c) => {
-                                return <option value={c.id}>{c.name}</option>;
+                                return <option value={c.address}>{c.address}</option>;
                             })}
                         </select>
                         <label htmlFor="" className='dailyReport-label-fldset-1'>
@@ -109,10 +119,10 @@ function ReportFilter({ onClose }) {
                 <div className='dailyReport-body-fldset-1'>
                     <div className='dailyReport-form-fldset-1'>
                         <select name="" id="" placeholder=''
-                            className='dailyReport-text-fldset-1'>
+                            className='dailyReport-text-fldset-1' onChange={handleFilterbyShift}>
                             <option value="">Shift</option>
                             {employee.map((c) => {
-                                return <option value={c.id}>{c.name}</option>;
+                                return <option value={c.salary}>{c.salary}</option>;
                             })}
                         </select>
                         <label htmlFor="" className='dailyReport-label-fldset-1'>
@@ -125,10 +135,10 @@ function ReportFilter({ onClose }) {
                 <div className='dailyReport-body-fldset-1'>
                     <div className='dailyReport-form-fldset-1'>
                         <select name="" id="" placeholder=''
-                            className='dailyReport-text-fldset-1'>
+                            className='dailyReport-text-fldset-1' onChange={handleFilterbyDepartment}>
                             <option value="">Department</option>
                             {employee.map((c) => {
-                                return <option value={c.id}>{c.name}</option>;
+                                return <option value={c.name}>{c.name}</option>;
                             })}
                         </select>
                         <label htmlFor="" className='dailyReport-label-fldset-1'>

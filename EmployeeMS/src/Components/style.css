@@ -1728,3 +1728,125 @@ input.checkbox-size {
 /* filter part ends */
 
  /* Daily Report Section ends*/
+
+ /* leave List start */
+ .leaveList-bg{
+    width: 81vw;
+    height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 80px;
+  }
+  .leaveList-bg-1{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    /* height: 70px; */
+    margin: 20px 7px 15px 15px;
+  }
+  .leaveList-bg-2{
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.334;
+    letter-spacing: 0em;
+  }
+  .leaveList-bg-3{
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    gap: 5px;
+  }
+  .leaveList-btn{
+    font-size: 13px;
+    font-weight: 700;
+    background: rgb(25, 118, 210);
+    padding: 4px 8px 4px 8px;
+    border-radius: 5px;
+    color: #fff;
+    width: 127px;
+    height: 33.5px;
+  }
+.leaveList-font-1 {
+    font-size: 15px;
+}
+.leaveList-DateContainer{
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 33.5px;
+    border: 1px solid rgb(197, 195, 195);
+    border-radius: 5px;
+    background-color: white;
+  }
+.leaveList-dateInput {
+    width: 100%;
+    height: 100%;
+  }
+.leaveList-dateInput input {
+    width: calc(90% + 25px);
+    height: 33.5px; 
+    border: none;
+    background: transparent;
+    z-index: 1;
+    margin-left: 10px;
+    /* color: rgb(110, 110, 110); */
+  }
+.leaveList-icon {
+    width: 29px;
+    margin-top: 0.9px;
+    /* color: rgb(110, 110, 110); */
+  }
+  textarea:focus, input:focus{
+    outline: none;
+  }
+  .leaveList-DateContainer:hover{
+    border: 1px solid #000;
+  }
+
+  .leaveList-body-fldset-1{
+    background: #fff;
+    width: 140px;
+    display: grid;
+    place-items: center;
+    color: #000;
+  }
+.leaveList-form-fldset-1{
+    position: relative;
+    width: 100%;
+}
+.leaveList-text-fldset-1{
+    border: 1px solid rgb(197, 195, 195);
+    border-radius: 5px;
+    outline: none;
+    background: none;
+    padding: 5px;
+    color: #000;
+    width: calc(80% + 19px);
+    height: 33.5px;
+}
+.leaveList-text-fldset-1:hover{
+    border: 1px solid #000;
+}
+.leaveList-text-fldset-1:focus{
+    border: 1.5px solid #000;
+}
+
+.leaveList-label-fldset-1{
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    cursor: text;
+    color: #a7aaac;
+    font-size: 13px;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+.leaveList-text-fldset-1:focus ~ .leaveList-label-fldset-1, .leaveList-text-fldset-1:not(:placeholder-shown).leaveList-text-fldset-1:not(:focus) ~.leaveList-label-fldset-1{
+    top: -0.4rem;
+    left: 0.5rem;
+    font-size: 9px;
+    background: #fff;
+    color: #000;
+    padding: 0 3px;
+}
+
+ /* leave List ends */

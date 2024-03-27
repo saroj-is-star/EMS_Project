@@ -30,6 +30,7 @@ import SupportHome from './Components/SupportHome'
 import SupportAbout from './Components/SupportAbout'
 import CurrentEmployee from './Components/currentEmployee'
 import DailyRepoart from './Components/DailyRepoart'
+import LeaveList from './Components/LeaveList'
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
           <Route path='' element={<Home />}></Route>
           <Route path='/dashboard/currentemployee' element={<CurrentEmployee />}></Route>
           <Route path='/dashboard/dailyReport' element={<DailyRepoart />}></Route>
+          <Route path='/dashboard/leaveList' element={<LeaveList />}></Route>
           <Route path='/dashboard/employeemenu' element={<EmployeeMenu />}>
           </Route>
           <Route path='/dashboard/employee' element={<Employee />}></Route>

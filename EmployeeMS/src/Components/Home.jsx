@@ -122,8 +122,8 @@ const Home = () => {
         <div className='row row-cols-1 row-cols-md-4 g-0 pe-3'>
           <div className='col '>
             <Link
-            to='/dashboard/currentemployee'
-            className='nav-link'>
+              to='/dashboard/currentemployee'
+              className='nav-link'>
               <div className='dash-1'>
                 <div className='d-flex justify-content-between dash-2 p-2'>
                   <div className='d-flex'>
@@ -154,66 +154,71 @@ const Home = () => {
             </Link>
           </div>
           <div className='col '>
-          <Link
-            to='/dashboard/dailyReport'
-            className='nav-link'>
-            <div className='dash-1'>
-              <div className='d-flex justify-content-between dash-3 p-2'>
-                <div className='d-flex'>
-                  <div className='me-2 icon-pre'>
-                    <i className="bi bi-bar-chart-fill icon-pre-1"></i>
+            <Link
+              to='/dashboard/dailyReport'
+              className='nav-link'>
+              <div className='dash-1'>
+                <div className='d-flex justify-content-between dash-3 p-2'>
+                  <div className='d-flex'>
+                    <div className='me-2 icon-pre'>
+                      <i className="bi bi-bar-chart-fill icon-pre-1"></i>
+                    </div>
+                    <div className='dash-font'>
+                      Present
+                    </div>
                   </div>
-                  <div className='dash-font'>
-                    Present
+                  <div className='dash-font-1'>
+                    {employeeTotal}
                   </div>
                 </div>
-                <div className='dash-font-1'>
-                  {employeeTotal}
+                <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
+                  <div>OD :</div>
+                  <div>{employeeTotal}</div>
+                </div>
+                <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
+                  <div>Leave :</div>
+                  <div>{employeeTotal}</div>
+                </div>
+                <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
+                  <div>Absent :</div>
+                  <div>{employeeTotal}</div>
                 </div>
               </div>
-              <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
-                <div>OD :</div>
-                <div>{employeeTotal}</div>
-              </div>
-              <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
-                <div>Leave :</div>
-                <div>{employeeTotal}</div>
-              </div>
-              <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
-                <div>Absent :</div>
-                <div>{employeeTotal}</div>
-              </div>
-            </div>
             </Link>
           </div>
           <div className='col '>
-            <div className='dash-1'>
-              <div className='d-flex justify-content-between dash-2 p-2'>
-                <div className='d-flex'>
-                  <div className='me-2 icon-leav'>
-                    <i className="bi bi-piggy-bank-fill icon-leav-1"></i>
+            <Link
+            to='/dashboard/leaveList'
+            className='nav-link'
+            >
+              <div className='dash-1'>
+                <div className='d-flex justify-content-between dash-2 p-2'>
+                  <div className='d-flex'>
+                    <div className='me-2 icon-leav'>
+                      <i className="bi bi-piggy-bank-fill icon-leav-1"></i>
+                    </div>
+                    <div className='dash-font'>
+                      Leaves
+                    </div>
                   </div>
-                  <div className='dash-font'>
-                    Leaves
+                  <div className='dash-font-1'>
+                    {employeeTotal}
                   </div>
                 </div>
-                <div className='dash-font-1'>
-                  {employeeTotal}
+                <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
+                  <div>Approved :</div>
+                  <div>{employeeTotal}</div>
+                </div>
+                <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
+                  <div>Pending :</div>
+                  <div>{employeeTotal}</div>
+                </div>
+                <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
+                  <div>Rejected :</div>
+                  <div>{employeeTotal}</div>
                 </div>
               </div>
-              <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
-                <div>Approved :</div>
-                <div>{employeeTotal}</div>
-              </div>
-              <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
-                <div>Pending :</div>
-                <div>{employeeTotal}</div>
-              </div>
-              <div className='d-flex justify-content-between m-2 border-bottom dash-font'>
-                <div>Rejected :</div>
-                <div>{employeeTotal}</div>
-              </div>
-            </div>
+            </Link>
           </div>
           <div className='col '>
             <div className='dash-1'>

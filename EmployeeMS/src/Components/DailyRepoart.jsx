@@ -5,8 +5,14 @@ import ReportFilter from './ReportFilter';
 const DailyRepoart = () => {
     const[date, setDate] = useState(new Date())
     const [employee, setEmployee] = useState([]);
+    const [employeeCopy, setEmployeeCopy] = useState([]);
+
     const [openReportFilter, setOpenReportFilter] = useState(false);
 
+    const [openReportFilterSearchText, setOpenReportFilterSearchText] = useState('');
+    const [filterbyDepartment, setFilterbyDepartment] = useState('');
+    const [filterbySite, setFilterbySite] = useState('');
+    const [filterbyShift, setFilterbyShift] = useState('');
 
     useEffect(() => {
         axios
@@ -14,6 +20,7 @@ const DailyRepoart = () => {
             .then((result) => {
                 if (result.data.Status) {
                     setEmployee(result.data.Result);
+                    setEmployeeCopy(result.data.Result)
                     setRecords(result.data.Result);
                 } else {
                     alert(result.data.Error);
@@ -22,7 +29,26 @@ const DailyRepoart = () => {
             .catch((err) => console.log(err));
     }, []);
 
-    
+    useEffect(() => {
+      setEmployee(employeeCopy.filter(f => f.name.toLowerCase().includes(openReportFilterSearchText)))
+  }, [openReportFilterSearchText]);
+
+    useEffect(() => {
+      setEmployee(employeeCopy.filter(f => f.name === filterbyDepartment))
+  }, [filterbyDepartment]);
+
+    useEffect(() => {
+      setEmployee(employeeCopy.filter(f => f.address === filterbySite))
+  }, [filterbySite]);
+
+    useEffect(() => {
+      setEmployee(employeeCopy.filter(f => f.salary == filterbyShift))
+  }, [filterbyShift]);
+
+    // console.log('event.target.value',openReportFilterSearchText )
+    // console.log('event.target.value',filterbyDepartment )
+    // console.log('event.target.value',filterbySite )
+    console.log('event.target.value',filterbyShift )
 
     // const [records, setRecords] = useState(data)
     // const handleFilter = (event) => {
@@ -58,6 +84,7 @@ const DailyRepoart = () => {
                       <tr>
                         <th>Emp Id</th>
                         <th>Employee</th>
+                        <th>Site</th>
                         <th>Shift</th>
                         <th>Department</th>
                         <th>Work Type</th>
@@ -94,10 +121,13 @@ const DailyRepoart = () => {
                             </div>
                           </td>
                           <td>
-                            {e.reason}
+                            {e.address}
                           </td>
                           <td>
-                            {e.from_date}
+                            {e.salary}
+                          </td>
+                          <td>
+                            {e.name}
                           </td>
                           <td>
                             {e.to_date}
@@ -130,7 +160,12 @@ const DailyRepoart = () => {
                 </div>
         </div>
         {
-          openReportFilter && <ReportFilter onClose={()=> setOpenReportFilter(false)}/>
+          openReportFilter && <ReportFilter 
+          setOpenReportFilterSearchText={setOpenReportFilterSearchText}  
+          setFilterbyDepartment={setFilterbyDepartment}
+          setFilterbySite={setFilterbySite}
+          setFilterbyShift={setFilterbyShift}
+          onClose={()=> setOpenReportFilter(false)}/>
         }
     </div>
   )
