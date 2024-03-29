@@ -1850,3 +1850,276 @@ input.checkbox-size {
 }
 
  /* leave List ends */
+
+ /* Employee Details start */
+
+ .employeeDetails-bg{
+    width: 81vw;
+    height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 80px;
+  }
+  .employeeDetails-bg-1{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+    /* height: 70px; */
+    margin: 10px 10px 10px 10px;
+  }
+  .employeeDetails-bg-2{
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.334;
+    letter-spacing: 0em;
+    display: flex;
+  }
+  .employeeDetails-btn-1{
+    font-size: 13px;
+    font-weight: 700;
+    background: rgb(25, 118, 210);
+    padding: 7px 10px 7px 12px;
+    border-radius: 5px;
+    color: #fff;
+    /* width: 118px; */
+    height: 33.5px;
+  }
+  .employeeDetails-bg-3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .employeeDetails-bg-4{
+    background: #f7eee9;
+    width: 100%;
+    height: 100%;
+    margin: 0px 10px;
+    border-radius: 10px;
+  }
+  .employeeDetails-bg-5{
+    font-size: 12px;
+    padding-right: 28px;
+    height: 38px;
+  }
+  .employeeDetails-bg-6{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  .employeeDetails-bg-6 li{
+    list-style: none;
+    text-decoration: none;
+  }
+  .employeeDetails-bg-6 li div{
+    padding: 10px 10px;
+    margin: 0px 3px;
+    background: rgb(220, 230, 239);
+    border-radius: 10px 10px 0 0;
+    height: 38px;
+  }
+  .employeeDetails-bg-6 li div:hover{
+    color: #1c5e99;
+    background: rgb(202, 210, 218);
+  }
+  .color-li-y {
+    border-bottom: 2px solid rgb(8, 8, 26);
+    height: 38px;
+}
+.basic-details-form{
+    /* text-align: center; */
+    /* background: #c47676; */
+    padding: 10px;
+}
+.basic-details-form-1{
+    border: 2px dotted rgb(25, 25, 228);
+    border-radius: 15px;
+}
+.basic-details-form-2{
+    border-bottom: 2px dotted green;
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.basic-details-form-3{
+    margin: 5px 10px;
+    font-size: 15px;
+}
+.basic-details-form-4{
+    color: #033f74;
+}
+.uploade-img{
+    width: 120px;
+    height: 120px;
+}
+.uploade-img-1{
+    width: 60px;
+    height: 60px;
+}
+
+.basic-details-form-4{
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+.basic-details-form-5{
+    margin: 20px 0;
+}
+
+.basic-details-form-6{
+    margin: 5px 0 28px 0;
+}
+
+.basic-details-form-7{
+    margin: 0px 0 28px 0;
+}
+.basic-details-form-8{
+    margin: 5px 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.basic-details-form-9{
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    /* gap: 10px; */
+    /* margin-right: 20px; */
+}
+.basic-details-form-10{
+    padding: 8px 5px;
+    width: 100px;
+    background: #0f7edf;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 10px;
+}
+.basic-details-form-11{
+    padding: 8px 5px;
+    width: 100px;
+    background: #0f7edf;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.basic-font{
+    font-size: 15px;
+}
+
+/* radio button styling  start*/
+
+.basic-btn input[type='radio']{
+    display: none;
+}
+.basic-btn label{
+    position: relative;
+    color: #777979;
+    background-color: #d6e6dd;
+    font-size: 15px;
+    border: 1px solid #777979;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+/* .basic-btn label:before{
+    content: '';
+    height: 30px;
+    width: 30px;
+    border: 3px solid #01cc65;
+    border-radius: 50%;
+    margin-right: 10px;
+} */
+.basic-btn input[type='radio']:checked + label{
+    background-color: #edfaf3;
+    color: #1977cf;
+    border: 1px solid #1977cf;
+}
+/* .basic-btn input[type='radio']:checked + label:before{
+    height: 15px;
+    width: 15px;
+    border: 5px solid #fff;
+    background-color: #01cc65;
+} */
+
+/* radio button styling  ends*/
+
+/* .basic-btn-1{
+    display: none;
+} */
+
+.emp-body-fldset-1{
+    background: #fff;
+    width: 320.48px;
+    display: grid;
+    place-items: center;
+    color: #000;
+  }
+.emp-form-fldset-1{
+    position: relative;
+    width: 100%;
+}
+.emp-text-fldset-1{
+    border: 1px solid rgb(197, 195, 195);
+    border-radius: 5px;
+    outline: none;
+    background: none;
+    padding: 5px;
+    color: #000;
+    width: calc(100% + 0px);
+    height: 33.5px;
+}
+.emp-text-fldset-1:hover{
+    border: 1px solid #000;
+}
+.emp-text-fldset-1:focus{
+    border: 1.5px solid #000;
+}
+
+.emp-label-fldset-1{
+    position: absolute;
+    top: 0.3rem;
+    left: 0.8rem;
+    cursor: text;
+    color: #a7aaac;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+.emp-text-fldset-1:focus ~ .emp-label-fldset-1, .emp-text-fldset-1:not(:placeholder-shown).emp-text-fldset-1:not(:focus) ~.emp-label-fldset-1{
+    top: -0.4rem;
+    left: 0.5rem;
+    font-size: 9px;
+    background: #fff;
+    color: #000;
+    padding: 0 3px;
+}
+ /* Employee Details ends */
+
+ /* advance details start*/
+
+ .basic-details-form-12{
+    margin: 5px 0 28px 0;
+}
+.basic-details-form-13{
+    margin: 5px 0 10px 0;
+}
+.basic-details-form-14{
+    margin: 15px 0 15px 0;
+}
+.basic-details-form-15{
+    margin-left: 12px;
+}
+.basic-details-form-16{
+    margin: 28px 0 50px 0;
+}
+.basic-details-form-17{
+    margin: 28px 15px 20px 15px;
+}
+ .row-up-line{
+    border-bottom: 2px dotted rgb(187, 183, 183);
+    margin: 0 10px;
+ }
+ .row-down-line{
+    border-bottom: 2px dotted rgb(187, 183, 183);
+    margin: 0 10px;
+ }
+ /* advance details ends */

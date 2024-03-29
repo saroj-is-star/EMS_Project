@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 const CurrentEmployee = () => {
     const [employee, setEmployee] = useState([]);
@@ -66,7 +67,11 @@ const CurrentEmployee = () => {
                         <div className='currentEmplyee-btn-3' role='button'><i className="bi bi-cloud-arrow-up-fill icon-2" /> Employee</div>
                     </div>
                     <div>
+                        <Link
+                        to='/dashboard/employeeDetails'
+                        className='nav-link'>
                         <div className='currentEmplyee-btn-4' role='button'>Add Employee</div>
+                        </Link>
                     </div>
                     <div>
                         <div className='currentEmplyee-btn-1' role='button'>Export</div>
