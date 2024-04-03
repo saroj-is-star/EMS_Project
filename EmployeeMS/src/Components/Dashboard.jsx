@@ -39,9 +39,9 @@ const Dashboard = () => {
     <>
       <div className="header-main shadow">
         <div className="header-main-1">
-          <div className="fs-3">
+          {/* <div className="fs-3">
             <i className="bi bi-list" role="button"></i>
-          </div>
+          </div> */}
           <div>
             <img src="/Images/Acetech-logo-1.png" alt="LOGO" className="logo_image" role="button" />
           </div>
