@@ -2251,3 +2251,140 @@ input.checkbox-size {
     margin: 0px 15px 30px 15px;
 }
  /* Bank Details start */
+
+ /* Qualification start */
+
+ .basic-details-form-26{
+    margin: 15px 10px 15px 10px;
+}
+
+
+.quali-body-fldset-1{
+    background: #fff;
+    border-radius: 5px;
+    width: 150px;
+    display: grid;
+    place-items: center;
+    color: #000;
+  }
+.quali-form-fldset-1{
+    position: relative;
+    width: 100%;
+}
+.quali-text-fldset-1{
+    border: 1px solid rgb(197, 195, 195);
+    border-radius: 5px;
+    outline: none;
+    background: none;
+    padding: 5px;
+    color: #000;
+    width: calc(100% + 0px);
+    height: 33.5px;
+}
+.quali-text-fldset-1:hover{
+    border: 1px solid #000;
+}
+.quali-text-fldset-1:focus{
+    border: 1.5px solid #000;
+}
+
+.quali-label-fldset-1{
+    position: absolute;
+    top: 0.3rem;
+    left: 0.8rem;
+    cursor: text;
+    color: #a7aaac;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+.quali-text-fldset-1:focus ~ .quali-label-fldset-1, .quali-text-fldset-1:not(:placeholder-shown).quali-text-fldset-1:not(:focus) ~.quali-label-fldset-1{
+    top: -0.4rem;
+    left: 0.5rem;
+    font-size: 9px;
+    background: #fff;
+    color: #000;
+    padding: 0 3px;
+}
+
+.qualification-div{
+    margin: 10px;
+    border: 1px solid #9cf19c;
+    border-radius: 10px;
+}
+.qualification-div-1{
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+.quali-div-main{
+    background-color: #f4f5f4;
+    border-radius: 0 0 10px 10px;
+}
+.qualification-div-2{
+    background: #f4f5f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-radius: 0 0 10px 10px; */
+}
+.qualification-div-3{
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #9cf19c;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.qualification-div-3:hover{
+    background-color: #0f7edf;
+    color: #fff;
+}
+.qualification-head{
+    height: 350px;
+    overflow-y: scroll;
+}
+ /* Qualification start */
+ /* Work Experience Start */
+
+ 
+
+ /* Work Experience Start */
+ .workExpe-head{
+    height: 350px;
+    overflow-y: scroll;
+ }
+ .basic-details-form-28{
+    margin: 15px 10px 0px 10px;
+}
+ /* Work Experience Start */
+
+/* Permition section start */
+ .permition-details-form-1{
+    margin: 15px 0 20px 0;
+}
+
+.permition-select{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px 15px 10px;
+    background: #ddebe8;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.permition-select-1{
+    display: flex;
+}
+.permition-select-2{
+    font-size: 15px;
+    font-weight: 700;
+}
+.permition-select-3{
+    margin: 10px;
+    background: #ddebe8;
+    border-radius: 7px;
+    padding: 10px;
+}
+/* Permition section ends */
