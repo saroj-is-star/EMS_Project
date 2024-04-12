@@ -1952,10 +1952,14 @@ input.checkbox-size {
 .uploade-img{
     width: 120px;
     height: 120px;
+    border-radius: 50%;
 }
 .uploade-img-1{
     width: 60px;
     height: 60px;
+}
+.img-upload-new{
+    display: none;
 }
 
 .basic-details-form-4{
@@ -2388,3 +2392,44 @@ input.checkbox-size {
     padding: 10px;
 }
 /* Permition section ends */
+
+/* Document section start */
+.document-div-1{
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.document-div-1:hover{
+    /* background: linear-gradient(#fbfcfb, #e4aee4, #fbfcfb); */
+    background: #f4f4f5;
+}
+.document-div{
+    margin: 10px;
+    border: 1px solid #9cf19c;
+    border-radius: 10px;
+}
+.btn-document-upload{
+    border: 1px solid #9cf19c;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #49a0ec;
+    color: #fff;
+}
+.btn-document-upload:hover{
+    background: #2577be;
+}
+.submit-button-style{
+    padding: 8px 5px;
+    width: 100px;
+    background: #0f7edf;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 10px;
+    border: none;
+}
+/* Document section ends */

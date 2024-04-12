@@ -7,6 +7,12 @@ const EmployeeDetails = () => {
     function updateToggle(id) {
         setToggle(id)
     }
+    const [profileImage, setProfileImage] = useState('')
+    const handleImageChange = (e) => {
+        const profile_img = e.target.files[0]
+        setProfileImage(e.target.files[0])
+    };
+
     const [expList, setExpList] = useState([
         {
             companyName: '',
@@ -192,16 +198,35 @@ const EmployeeDetails = () => {
                                         <div className='basic-details-form-1'>
                                             <div className='basic-details-form-2'>
                                                 <div className='ms-1 mt-2 mb-2 me-2'>
-                                                    <img
+                                                    {/* <img
                                                         src="/Images/people-icon.png"
                                                         alt="Show uploded Image"
-                                                        className="uploade-img" role="button" />
+                                                        className="uploade-img"/> */}
+                                                    {profileImage ?
+                                                        <label htmlFor="img-upload"><img
+                                                            src={URL.createObjectURL(profileImage)}
+                                                            alt=""
+                                                            className="uploade-img" /></label>
+                                                        :
+                                                        <label htmlFor="img-upload"><img
+                                                            src="/Images/people-icon.png"
+                                                            alt="Show uploded Image"
+                                                            className="uploade-img" /></label>
+                                                    }
                                                 </div>
                                                 <div className='me-5'>
-                                                    <img
+                                                    {/* <img
                                                         src="/Images/upload-icon.png"
                                                         alt="Upload Image Icon"
-                                                        className="uploade-img-1" role="button" />
+                                                        className="uploade-img-1" role="button" /> */}
+                                                    <label htmlFor="img-upload">
+                                                        <img
+                                                            src="/Images/upload-icon.png"
+                                                            alt="Upload Image Icon"
+                                                            className="uploade-img-1" role="button" />
+                                                    </label>
+                                                    <input type="file" id='img-upload' name='img-upload' className='img-upload-new'
+                                                        onChange={handleImageChange} />
                                                 </div>
                                             </div>
                                             <div className='basic-details-form-3'>
@@ -210,7 +235,10 @@ const EmployeeDetails = () => {
                                                 </div>
                                                 <div>
                                                     <span className='basic-details-form-4' role='button'>
-                                                        Choose from your system.
+                                                        {/* Choose from your system. */}
+                                                        <label htmlFor="img-upload">
+                                                            Choose from your system.
+                                                        </label>
                                                     </span>
                                                 </div>
                                             </div>
@@ -2476,7 +2504,84 @@ const EmployeeDetails = () => {
                             </div>
                         </div>
 
-                        <div className={toggle === 10 ? "show-tab-container" : "tab-container"}>10</div>
+                        <div className={toggle === 10 ? "show-tab-container" : "tab-container"}>
+                            <div className='row row-cols-1 row-cols-md-1'>
+                                <div className='col'>
+                                    <div className='workExpe-head'>
+                                        <div className='document-div'>
+
+                                            <div className='document-div-1'>
+                                                <div>
+                                                    10th Certificate
+                                                </div>
+                                                <div>
+                                                    <div className='btn-document-upload'>
+                                                        <input type="file" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='document-div-1'>
+                                                <div>
+                                                    12th Certificate
+                                                </div>
+                                                <div>
+                                                    <div className='btn-document-upload'>
+                                                        <input type="file" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='document-div-1'>
+                                                <div>
+                                                    Graduation
+                                                </div>
+                                                <div>
+                                                    <div className='btn-document-upload'>
+                                                        <input type="file" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='document-div-1'>
+                                                <div>
+                                                    Post Graduation
+                                                </div>
+                                                <div>
+                                                    <div className='btn-document-upload'>
+                                                        <input type="file" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className='document-div-1'>
+                                                <div>
+                                                    Other Course
+                                                </div>
+                                                <div>
+                                                    <div className='btn-document-upload'>
+                                                        <input type="file" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='basic-details-form-17'>
+                                        <div className='d-flex justify-content-between text-center'>
+                                            <div className='basic-details-form-11'
+                                                onClick={() => updateToggle(9)}>
+                                                Back
+                                            </div>
+                                            {/* <div className='basic-details-form-10'>
+                                                Submit
+                                            </div> */}
+                                            <div>
+                                                <button className='submit-button-style'>
+                                                    Submit
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
