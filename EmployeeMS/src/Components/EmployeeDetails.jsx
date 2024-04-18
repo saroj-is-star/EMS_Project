@@ -286,7 +286,7 @@ const EmployeeDetails = () => {
         formData.append('certifiPg', employee.certifiPg);
         formData.append('certifiother', employee.certifiother);
 
-        axios.post('http://localhost:3000/auth/add_employee', formData)
+        axios.post('http://localhost:3000/auth/add_employee_details', formData)
     .then(result => {
         if(result.data.Status) {
             // navigate('/dashboard/employee')
@@ -662,11 +662,12 @@ const EmployeeDetails = () => {
         const list = [...expList]
         list[i][name] = value
         setExpList(list)
-        setEmployee({ ...employee, list })
+        setEmployee({ ...employee, expList_1:expList })
         // setEmployee({ ...employee, list: e.target.value })
     }
 
     // console.log(expList);
+    console.log(employee , 'Employee data');
 
     const [familyList, setFamilyList] = useState([
         {
@@ -698,7 +699,7 @@ const EmployeeDetails = () => {
         const fList = [...familyList]
         fList[j][name] = value
         setFamilyList(fList)
-        setEmployee({ ...employee, fList })
+        setEmployee({ ...employee, familyList_1: familyList })
         // setEmployee({ ...employee, fList: e.target.value })
     }
     const [assetList, setAssetList] = useState([
@@ -731,7 +732,7 @@ const EmployeeDetails = () => {
         const aList = [...assetList]
         aList[k][name] = value
         setAssetList(aList)
-        setEmployee({ ...employee, aList })
+        setEmployee({ ...employee, assetList_1: assetList })
         // setEmployee({ ...employee, aList: e.target.value })
     }
 
@@ -3197,7 +3198,7 @@ const EmployeeDetails = () => {
                                         <label htmlFor="permi-yes-1">Yes</label>
                                     </div>
                                     <div className=' me-2'>
-                                        <input type="radio" id='permi-yes-2' name='permi-left' className='me-2' checked='checked' value='No'
+                                        <input type="radio" id='permi-yes-2' name='permi-left' className='me-2' value='No'
                                             onChange={(e) =>
                                                 setEmployee({ ...employee, flexiHour: e.target.value })
                                             } />
@@ -3218,7 +3219,7 @@ const EmployeeDetails = () => {
                                         <label htmlFor="permi-yes-3">Yes</label>
                                     </div>
                                     <div className=' me-2'>
-                                        <input type="radio" id='permi-yes-4' name='permi-right' className='me-2' checked='checked' value='No'
+                                        <input type="radio" id='permi-yes-4' name='permi-right' className='me-2' value='No'
                                             onChange={(e) =>
                                                 setEmployee({ ...employee, adminRole: e.target.value })
                                             } />
