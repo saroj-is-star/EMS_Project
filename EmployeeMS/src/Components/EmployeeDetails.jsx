@@ -1522,7 +1522,7 @@ const EmployeeDetails = () => {
                                             </div>
                                         </div>
                                         <div className='basic-details-form-9'>
-                                            <div className='basic-details-form-10'>Save</div>
+                                            {/* <div className='basic-details-form-10'>Save</div> */}
                                             <div className='basic-details-form-11'
                                                 onClick={() => updateToggle(2)}>
                                                 Next
@@ -1796,9 +1796,9 @@ const EmployeeDetails = () => {
                                         onClick={() => updateToggle(1)}>
                                         Back
                                     </div>
-                                    <div className='basic-details-form-10'>
+                                    {/* <div className='basic-details-form-10'>
                                         Save
-                                    </div>
+                                    </div> */}
                                     <div className='basic-details-form-11'
                                         onClick={() => updateToggle(3)}>
                                         Next
@@ -2020,9 +2020,9 @@ const EmployeeDetails = () => {
                                         onClick={() => updateToggle(2)}>
                                         Back
                                     </div>
-                                    <div className='basic-details-form-10'>
+                                    {/* <div className='basic-details-form-10'>
                                         Save
-                                    </div>
+                                    </div> */}
                                     <div className='basic-details-form-11'
                                         onClick={() => updateToggle(4)}>
                                         Next
@@ -2213,9 +2213,9 @@ const EmployeeDetails = () => {
                                         onClick={() => updateToggle(3)}>
                                         Back
                                     </div>
-                                    <div className='basic-details-form-10'>
+                                    {/* <div className='basic-details-form-10'>
                                         Save
-                                    </div>
+                                    </div> */}
                                     <div className='basic-details-form-11'
                                         onClick={() => updateToggle(5)}>
                                         Next
@@ -2743,9 +2743,9 @@ const EmployeeDetails = () => {
                                                 onClick={() => updateToggle(4)}>
                                                 Back
                                             </div>
-                                            <div className='basic-details-form-10'>
+                                            {/* <div className='basic-details-form-10'>
                                                 Save
-                                            </div>
+                                            </div> */}
                                             <div className='basic-details-form-11'
                                                 onClick={() => updateToggle(6)}>
                                                 Next
@@ -2912,9 +2912,9 @@ const EmployeeDetails = () => {
                                                 onClick={() => updateToggle(5)}>
                                                 Back
                                             </div>
-                                            <div className='basic-details-form-10'>
+                                            {/* <div className='basic-details-form-10'>
                                                 Save
-                                            </div>
+                                            </div> */}
                                             <div className='basic-details-form-11'
                                                 onClick={() => updateToggle(7)}>
                                                 Next
@@ -3426,9 +3426,9 @@ const EmployeeDetails = () => {
                                         onClick={() => updateToggle(6)}>
                                         Back
                                     </div>
-                                    <div className='basic-details-form-10'>
+                                    {/* <div className='basic-details-form-10'>
                                         Save
-                                    </div>
+                                    </div> */}
                                     <div className='basic-details-form-11'
                                         onClick={() => updateToggle(8)}>
                                         Next
@@ -3590,9 +3590,9 @@ const EmployeeDetails = () => {
                                                 onClick={() => updateToggle(7)}>
                                                 Back
                                             </div>
-                                            <div className='basic-details-form-10'>
+                                            {/* <div className='basic-details-form-10'>
                                                 Save
-                                            </div>
+                                            </div> */}
                                             <div className='basic-details-form-11'
                                                 onClick={() => updateToggle(9)}>
                                                 Next
@@ -3756,9 +3756,9 @@ const EmployeeDetails = () => {
                                                 onClick={() => updateToggle(8)}>
                                                 Back
                                             </div>
-                                            <div className='basic-details-form-10'>
+                                            {/* <div className='basic-details-form-10'>
                                                 Save
-                                            </div>
+                                            </div> */}
                                             <div className='basic-details-form-11'
                                                 onClick={() => updateToggle(10)}>
                                                 Next
